@@ -112,6 +112,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/getStarted"
             android:text="Get Started"
             android:textSize="20sp"
             android:fontFamily="monospace"
