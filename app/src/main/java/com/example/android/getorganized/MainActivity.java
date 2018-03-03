@@ -23,4 +23,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void maleClick(View view) {
+    }
+
+    public void femaleClick(View view) {
+    }
+
+    public void englishClick(View view) {
+    }
+
+    public void chineseClick(View view) {
+    }
 }
