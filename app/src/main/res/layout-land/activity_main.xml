@@ -100,7 +100,7 @@
         </RadioGroup>
 
         <TextView
-            android:text="This information will help us better server your needs. \nYou can change it anytime in Menu - Settings"
+            android:text="This information will help us better serve your needs. \nYou can change it anytime in Menu - Settings"
             android:fontFamily="casual"
             android:textSize="10sp"
             android:gravity="left"

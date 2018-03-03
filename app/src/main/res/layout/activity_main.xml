@@ -102,7 +102,7 @@
         </RadioGroup>
 
         <TextView
-            android:text="This information will help \nus better server your needs. \nYou can change it anytime \nin Menu - Settings"
+            android:text="This information will help \nus better serve your needs. \nYou can change it anytime \nin Menu - Settings"
             android:fontFamily="casual"
             android:textSize="10sp"
             android:gravity="left"
