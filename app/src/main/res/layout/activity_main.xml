@@ -89,8 +89,7 @@
                 android:textSize="10sp"
                 android:id="@+id/english"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="englishClick" />
+                android:layout_height="wrap_content"/>
 
             <RadioButton
                 android:text="Simplified Chinese"
@@ -98,8 +97,7 @@
                 android:textSize="10sp"
                 android:id="@+id/chinese"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="chineseClick"/>
+                android:layout_height="wrap_content"/>
 
         </RadioGroup>
 
