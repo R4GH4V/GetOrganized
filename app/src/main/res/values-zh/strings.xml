@@ -7,4 +7,63 @@
     <string name="calendar">日历</string>
     <string name="shop">店</string>
     <string name="menu">菜单</string>
+
+
+    <string-array name="Kind">
+        <item>所有</item>
+        <item>最佳</item>
+        <item>底部</item>
+        <item>
+鞋</item>
+        <item>饰品</item>
+    </string-array>
+
+    <string-array name="Top">
+        <item>所有</item>
+        <item>活性</item>
+        <item>
+开拓者和西装</item>
+        <item>
+大衣和夹克</item>
+        <item>连衣裙</item>
+        <item>衬衫</item>
+        <item>毛衣</item>
+        <item>运动衫</item>
+        <item>T恤</item>
+    </string-array>
+
+    <string-array name="Bottom">
+        <item>所有</item>
+        <item>牛仔裤</item>
+        <item>短裤</item>
+        <item>裳</item>
+        <item>长裤</item>
+    </string-array>
+
+    <string-array name="Footwear">
+        <item>所有</item>
+        <item>
+竞技</item>
+        <item>靴子</item>
+        <item>
+公寓</item>
+        <item>脚跟</item>
+        <item>凉鞋</item>
+    </string-array>
+
+    <string-array name="Accessories">
+        <item>所有</item>
+        <item>手袋</item>
+        <item>腰带</item>
+        <item>手套</item>
+        <item>帽子</item>
+        <item>首饰</item>
+        <item>围巾</item>
+        <item>袜子</item>
+        <item>墨镜</item>
+        <item>手表</item>
+    </string-array>
+
+
+
 </resources>

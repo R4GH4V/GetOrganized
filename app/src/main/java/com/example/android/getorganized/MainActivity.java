@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setLocale("zh");
     }
 
+
     @Override
     public void onClick(View v) {
 

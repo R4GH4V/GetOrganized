@@ -40,6 +40,7 @@
     </string-array>
 
     <string-array name="Footwear">
+        <item>All</item>
         <item>Athletic</item>
         <item>Boots</item>
         <item>Flats</item>

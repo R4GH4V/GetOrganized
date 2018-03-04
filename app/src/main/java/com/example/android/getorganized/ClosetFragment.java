@@ -45,19 +45,19 @@ public class ClosetFragment extends Fragment implements OnItemSelectedListener {
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String sp1= String.valueOf(spinner1.getSelectedItem());
         Toast.makeText(getActivity(), sp1, Toast.LENGTH_SHORT).show();
-        if(sp1.contentEquals("Top")) {
+        if(sp1.contentEquals("Top") || sp1.contentEquals("最佳")) {
             ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Top, android.R.layout.simple_spinner_item);
             spinner2.setAdapter(adapter2);
         }
-        if(sp1.contentEquals("Bottom")){
+        if(sp1.contentEquals("Bottom") || sp1.contentEquals("底部")){
             ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Bottom, android.R.layout.simple_spinner_item);
             spinner2.setAdapter(adapter2);
         }
-        if(sp1.contentEquals("Footwear")){
+        if(sp1.contentEquals("Footwear") || sp1.contentEquals("鞋")){
             ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Footwear, android.R.layout.simple_spinner_item);
             spinner2.setAdapter(adapter2);
         }
-        if(sp1.contentEquals("Accessories")){
+        if(sp1.contentEquals("Accessories") || sp1.contentEquals("饰品")){
             ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Accessories, android.R.layout.simple_spinner_item);
             spinner2.setAdapter(adapter2);
         }
