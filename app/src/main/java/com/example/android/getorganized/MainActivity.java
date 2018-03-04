@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findviewByid();
+        setonclicklistener();
+    }
+
+    private void setonclicklistener() {
+        btnstart.setOnClickListener(this);
     }
 
     private void findviewByid() {
@@ -65,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         res.updateConfiguration(conf, dm);
         Intent refresh = new Intent(this, MainActivity.class);
         startActivity(refresh);
-
         finish();
     }
 }
