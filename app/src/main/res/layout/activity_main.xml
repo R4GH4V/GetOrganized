@@ -22,7 +22,7 @@
 
 
         <TextView
-            android:text="Email: "
+            android:text="@string/email"
             android:fontFamily="monospace"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -87,6 +87,7 @@
                 android:text="English"
                 android:fontFamily="monospace"
                 android:textSize="10sp"
+                android:id="@+id/english"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="englishClick" />
@@ -95,6 +96,7 @@
                 android:text="Simplified Chinese"
                 android:fontFamily="monospace"
                 android:textSize="10sp"
+                android:id="@+id/chinese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="chineseClick"/>
