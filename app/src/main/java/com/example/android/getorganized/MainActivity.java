@@ -1,11 +1,8 @@
 package com.example.android.getorganized;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -49,12 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         eng.setOnClickListener(this);
         chi.setOnClickListener(this);
     }
-    public void maleClick(View view) {
-    }
-
-    public void femaleClick(View view) {
-    }
-
+    
     public void englishClick(View view) {
         setLocale("en");
     }
@@ -82,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+    
     public void setLocale(String lang)
     {
         Locale locale= new Locale(lang);
