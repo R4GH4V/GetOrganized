@@ -17,9 +17,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".navdrawer"
+            android:name=".NavdrawerActivity"
             android:label="@string/title_activity_navdrawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/menu"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

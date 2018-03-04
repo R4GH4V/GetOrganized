@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId())
         {
             case R.id.getStarted:
-                Intent in=new Intent(MainActivity.this,navdrawer.class);
+                Intent in=new Intent(MainActivity.this,NavdrawerActivity.class);
                 startActivity(in);
                 break;
 
