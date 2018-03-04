@@ -55,14 +55,16 @@
                 android:fontFamily="monospace"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="maleClick" />
 
             <RadioButton
                 android:text="Female"
                 android:fontFamily="monospace"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="femaleClick"/>
 
         </RadioGroup>
 
@@ -79,8 +81,8 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/group">
+            android:orientation="vertical" 
+            android:id="@+id/group"        >
 
             <RadioButton
                 android:text="English"
@@ -88,8 +90,7 @@
                 android:textSize="10sp"
                 android:id="@+id/eng"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content"/>
 
             <RadioButton
                 android:text="Simplified Chinese"
