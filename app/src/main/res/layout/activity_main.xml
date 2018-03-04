@@ -55,16 +55,14 @@
                 android:fontFamily="monospace"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="maleClick" />
+                android:layout_height="wrap_content" />
 
             <RadioButton
                 android:text="Female"
                 android:fontFamily="monospace"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="femaleClick"/>
+                android:layout_height="wrap_content" />
 
         </RadioGroup>
 
