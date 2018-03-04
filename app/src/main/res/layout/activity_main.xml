@@ -81,25 +81,27 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:id="@+id/group">
 
             <RadioButton
                 android:text="English"
                 android:fontFamily="monospace"
                 android:textSize="10sp"
-                android:id="@+id/english"
+                android:id="@+id/eng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="englishClick" />
+                />
 
             <RadioButton
                 android:text="Simplified Chinese"
                 android:fontFamily="monospace"
                 android:textSize="10sp"
-                android:id="@+id/chinese"
+                android:id="@+id/chi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="chineseClick"/>
+                />
+
 
         </RadioGroup>
 
