@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">组织起来</string>
+    <string name="email">电子邮件</string>
+    <string name="closet">壁橱</string>
+    <string name="calendar">日历</string>
+    <string name="shop">店</string>
+    <string name="menu">菜单</string>
+</resources>
