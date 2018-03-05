@@ -1,5 +1,6 @@
 package com.example.android.getorganized;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -62,15 +63,20 @@ public class MenuFragment extends ListFragment {
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0) {
-                    ((MenuActivity) MenuFragment.this.getActivity()).transitTo(new StatisticsFragment());
-                }
-                if(position == 1) {
-                    ((MenuActivity) MenuFragment.this.getActivity()).transitTo(new SettingsFragment());
-                }
-                if(position == 2) {
-                    ((MenuActivity) MenuFragment.this.getActivity()).transitTo(new HelpFragment());
-                }
+
+                Intent intent = new Intent(getActivity().getBaseContext(), SubmenuActivity.class);
+                intent.putExtra("position", position);
+                startActivity(intent);
+
+//                if(position == 0) {
+//                    ((MenuActivity) MenuFragment.this.getActivity()).transitTo(new StatisticsFragment());
+//                }
+//                if(position == 1) {
+//                    ((MenuActivity) MenuFragment.this.getActivity()).transitTo(new SettingsFragment());
+//                }
+//                if(position == 2) {
+//                    ((MenuActivity) MenuFragment.this.getActivity()).transitTo(new HelpFragment());
+//                }
             }
         });
     }

@@ -24,6 +24,10 @@
             android:name=".MenuActivity"
             android:label="@string/menu"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SubmenuActivity"
+            android:label="Menu"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
