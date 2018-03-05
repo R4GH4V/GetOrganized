@@ -29,7 +29,7 @@ public class FeedbackFragment extends Fragment {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ratingDisplayTextView.setText(getResources().getString(R.string.yourrating)+ ratingRatingBar.getRating());
+                ratingDisplayTextView.setText(getResources().getString(R.string.yourrating)+" "+ ratingRatingBar.getRating());
             }
         });
     }
