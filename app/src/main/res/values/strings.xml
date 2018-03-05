@@ -31,7 +31,6 @@
 
     <string-array name="Top">
         <item>All</item>
-        <item>Active</item>
         <item>Blazers and Suiting</item>
         <item>Coats and Jackets</item>
         <item>Dresses</item>
