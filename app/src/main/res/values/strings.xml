@@ -19,6 +19,9 @@
     <string name="mostwornitem">Most Worn Item</string>
     <string name="howtousethisapp">How to use this app?</string>
     <string name="helpcontent">Thank you for using this app! It will help you get organized. \n\n</string>
+    <string name="rating">Your rating will appear here.</string>
+    <string name="submit">Submit</string>
+    <string name="yourrating">Your rating is: </string>
     <string name="kind">Kind</string>
     <string name="category">Category</string>
     <string-array name="Kind">

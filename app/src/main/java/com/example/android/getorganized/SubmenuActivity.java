@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class SubmenuActivity extends AppCompatActivity{
+public class SubmenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,10 @@ public class SubmenuActivity extends AppCompatActivity{
             ft.commit();
         }
         if(position==3) {
-            //Feedback, dialog fragment
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            FragmentTransaction ft=fragmentManager.beginTransaction();
+            ft.replace(R.id.submenu_container, new FeedbackFragment());
+            ft.commit();
         }
 
     }

@@ -16,6 +16,9 @@
     <string name="mostwornitem">最常使用物品</string>
     <string name="howtousethisapp">应用使用指南</string>
     <string name="helpcontent">感谢你使用这款应用！它会帮助你更好地整理衣橱。 \n\n</string>
+    <string name="rating">您的评分将出现在这里。</string>
+    <string name="submit">提交</string>
+    <string name="yourrating">您的评分是：</string>
     <string name="kind">大类</string>
     <string name="category">类别</string>
 

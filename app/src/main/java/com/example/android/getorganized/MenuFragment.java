@@ -26,7 +26,7 @@ public class MenuFragment extends ListFragment {
             R.drawable.ic_feedback
         };
 
-    ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
+    ArrayList<HashMap<String, String>> data = new ArrayList<>();
     SimpleAdapter adapter;
  
 
@@ -38,9 +38,9 @@ public class MenuFragment extends ListFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         String[] menu_array = getResources().getStringArray(R.array.menu_array);
-        HashMap<String, String> map = new HashMap<String, String>();
+        HashMap<String, String> map;
         for (int i = 0; i < menu_array.length; i ++) {
-            map = new HashMap<String, String>();
+            map = new HashMap<>();
             map.put("menu_text", menu_array[i]);
             map.put("menu_icon", Integer.toString(icons[i]));
 
@@ -77,6 +77,7 @@ public class MenuFragment extends ListFragment {
 //                if(position == 2) {
 //                    ((MenuActivity) MenuFragment.this.getActivity()).transitTo(new HelpFragment());
 //                }
+
             }
         });
     }
