@@ -24,6 +24,10 @@
     <string name="yourrating">Your rating is: </string>
     <string name="kind">Kind</string>
     <string name="category">Category</string>
+    <string name="email_feedback">Give Feedback</string>
+
+
+
     <string-array name="Kind">
         <item>All</item>
         <item>Top</item>

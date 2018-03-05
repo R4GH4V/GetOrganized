@@ -21,6 +21,7 @@
     <string name="yourrating">您的评分是：</string>
     <string name="kind">大类</string>
     <string name="category">类别</string>
+    <string name="email_feedback">给予反馈</string>
 
 
     <string-array name="Kind">

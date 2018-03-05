@@ -13,26 +13,36 @@
         android:id="@+id/rating_rating_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/submit_button"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
+        android:layout_marginTop="13dp"
         android:numStars="5"
         android:stepSize=".5" />
 
     <Button
-        android:text="@string/submit"
+        android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/rating_rating_bar"
         android:layout_centerHorizontal="true"
-        android:id="@+id/submit_button" />
+        android:layout_marginTop="19dp"
+        android:text="@string/submit" />
 
     <TextView
-        android:text="@string/rating"
+        android:id="@+id/rating_display_text_View"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/submit_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp"
-        android:id="@+id/rating_display_text_View" />
+        android:layout_marginTop="14dp"
+        android:text="@string/rating" />
+
+    <Button
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:text="@string/email_feedback" />
 </RelativeLayout>
