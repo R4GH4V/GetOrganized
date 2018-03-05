@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">组织起来</string>
+    <string name="app_name">整理</string>
     <string name="email">电子邮件</string>
-    <string name="closet">壁橱</string>
+    <string name="closet">衣橱</string>
     <string name="calendar">日历</string>
-    <string name="shop">店</string>
+    <string name="shop">购物</string>
     <string name="menu">菜单</string>
+    <string name="statistics">统计</string>
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="feedback">反馈</string>
+    <string name="itemcount">物品数量</string>
+    <string name="totalvalue">总价值</string>
+    <string name="mostwornitem">最常使用物品</string>
+    <string name="howtousethisapp">应用使用指南</string>
+    <string name="helpcontent">感谢你使用这款应用！它会帮助你更好地整理衣橱。 \n\n</string>
+    <string name="kind">大类</string>
+    <string name="category">类别</string>
 
 
     <string-array name="Kind">
-        <item>所有</item>
-        <item>最佳</item>
-        <item>底部</item>
-        <item>
-鞋</item>
-        <item>饰品</item>
+        <item>全部</item>
+        <item>上装</item>
+        <item>下装</item>
+        <item>鞋类</item>
+        <item>配饰</item>
     </string-array>
 
     <string-array name="Top">
-        <item>所有</item>
-        <item>
-开拓者和西装</item>
-        <item>
-大衣和夹克</item>
+        <item>全部</item>
+        <item>西装</item>
+        <item>大衣和夹克</item>
         <item>连衣裙</item>
         <item>衬衫</item>
         <item>毛衣</item>
@@ -32,27 +40,25 @@
     </string-array>
 
     <string-array name="Bottom">
-        <item>所有</item>
+        <item>全部</item>
         <item>牛仔裤</item>
         <item>短裤</item>
-        <item>裳</item>
+        <item>半身裙</item>
         <item>长裤</item>
     </string-array>
 
     <string-array name="Footwear">
-        <item>所有</item>
-        <item>
-竞技</item>
+        <item>全部</item>
+        <item>运动鞋</item>
         <item>靴子</item>
-        <item>
-公寓</item>
-        <item>脚跟</item>
+        <item>平底鞋</item>
+        <item>高跟鞋</item>
         <item>凉鞋</item>
     </string-array>
 
     <string-array name="Accessories">
-        <item>所有</item>
-        <item>手袋</item>
+        <item>全部</item>
+        <item>包袋</item>
         <item>腰带</item>
         <item>手套</item>
         <item>帽子</item>
