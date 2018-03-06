@@ -22,6 +22,13 @@
     <string name="kind">大类</string>
     <string name="category">类别</string>
     <string name="email_feedback">给予反馈</string>
+    <string name="price">价格:</string>
+    <string name="brand">烙印</string>
+    <string name="season">赛季</string>
+    <string name="rate">费率项</string>
+    <string name="note">备注</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
 
 
     <string-array name="Kind">

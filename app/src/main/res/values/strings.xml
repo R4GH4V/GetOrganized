@@ -25,6 +25,14 @@
     <string name="kind">Kind</string>
     <string name="category">Category</string>
     <string name="email_feedback">Give Feedback</string>
+    <string name="price">Price:</string>
+    <string name="brand">Brand</string>
+    <string name="season">Season</string>
+    <string name="rate">Rate item</string>
+    <string name="note">Notes</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
 
 
 
