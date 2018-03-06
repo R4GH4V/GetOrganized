@@ -39,12 +39,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_ITEMS + "("
-                + KEY_ID +" UNSIGNED NOT NULL PRIMARY KEY AUTOINCREMENT, "
+                + KEY_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + KEY_IMAGE  + " BLOB, "
                 + KEY_KIND + " TEXT, "
                 + KEY_CATEGORY + " TEXT, "
                 + KEY_PRICE + " UNSIGNED, "
-                + KEY_SEASON + " TEXT);");   // need to complete this
+                + KEY_SEASON + " TEXT);");
     }
 
     // Upgrading database
@@ -63,18 +63,20 @@ public class DatabaseHandler extends SQLiteOpenHelper {
      */
 
     //Insert values to the table items
-    public void addItem(Item item){   //addContacts(Item contact)
-        SQLiteDatabase db = this.getReadableDatabase();
+    // return a boolean, true -> successfully inserted, false -> not inserted
+    public boolean addItem(Item item){   //addContacts(Item contact)
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values=new ContentValues();
 
         values.put(KEY_IMAGE, item.getImage());
-        values.put(KEY_KIND, item.getKind());   // add these functions in Item.java
+        values.put(KEY_KIND, item.getKind());
         values.put(KEY_CATEGORY, item.getCategory());
         values.put(KEY_PRICE, item.getPrice());
         values.put(KEY_SEASON, item.getSeason());
 
-        db.insert(TABLE_ITEMS, null, values);
-        db.close();
+        long result = db.insert(TABLE_ITEMS, null, values);
+        return (result != -1);
+        //db.close();
     }
 
 
