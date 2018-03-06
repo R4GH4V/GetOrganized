@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <Spinner
+        android:id="@+id/kind"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/price_text"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/price_text"
+        android:layout_marginTop="23dp" />
+
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/kind"
+        android:layout_alignStart="@+id/kind"
+        android:layout_below="@+id/kind"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:id="@+id/price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/price"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/season_text"
+        android:layout_alignStart="@+id/season_text"
+        android:layout_below="@+id/brand_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/price"
+        android:layout_alignLeft="@+id/price"
+        android:layout_alignStart="@+id/price"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/brand_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSave"
+        android:layout_alignLeft="@+id/category"
+        android:layout_alignStart="@+id/category"
+        android:text="@string/brand"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/season_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/rate_text"
+        android:layout_alignRight="@+id/rate_text"
+        android:layout_below="@+id/btnCancel"
+        android:text="@string/season"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/season_text"
+        android:layout_alignBottom="@+id/season_text"
+        android:layout_alignLeft="@+id/rate"
+        android:layout_alignStart="@+id/rate"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/rate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rate"
+        android:layout_alignBottom="@+id/rate"
+        android:layout_toEndOf="@+id/brand_text"
+        android:layout_toRightOf="@+id/brand_text"
+        android:text="@string/rate"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/season"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/price_text"
+        android:layout_alignLeft="@+id/btnCancel"
+        android:layout_alignStart="@+id/btnCancel"
+        android:text="@string/save" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/price_text"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:text="@string/cancel" />
+
+    <TextView
+        android:id="@+id/note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/note"
+        android:layout_alignBottom="@+id/note"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_toEndOf="@+id/kind"
+        android:layout_toRightOf="@+id/kind"
+        android:text="@string/note"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/kind"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/note_text"
+        android:layout_toRightOf="@+id/note_text"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+
+</RelativeLayout>
