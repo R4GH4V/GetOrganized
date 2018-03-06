@@ -37,11 +37,11 @@
         android:id="@+id/rating_display_text_View" />
 
     <Button
-    android:id="@+id/email"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/rating_display_text_View"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="37dp"
-    android:text="@string/email_feedback" />
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rating_display_text_View"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="@string/email_feedback" />
 </RelativeLayout>
