@@ -40,25 +40,14 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/season_text"
         android:layout_alignStart="@+id/season_text"
-        android:layout_below="@+id/brand_text"
+        android:layout_below="@+id/worn_text"
         android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:ems="10"
         android:inputType="number" />
 
-    <EditText
-        android:id="@+id/brand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/price"
-        android:layout_alignLeft="@+id/price"
-        android:layout_alignStart="@+id/price"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="" />
-
     <TextView
-        android:id="@+id/brand_text"
+        android:id="@+id/worn_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnSave"
@@ -72,9 +61,9 @@
         android:id="@+id/season_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/rate_text"
+        android:layout_alignRight="@+id/rate_text"
         android:layout_below="@+id/btnCancel"
-        android:layout_toLeftOf="@+id/season"
-        android:layout_toStartOf="@+id/season"
         android:text="@string/season"
         android:textSize="20sp" />
 
@@ -96,8 +85,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/rate"
         android:layout_alignBottom="@+id/rate"
-        android:layout_alignLeft="@+id/season_text"
-        android:layout_alignStart="@+id/season_text"
+        android:layout_alignLeft="@+id/date"
+        android:layout_alignStart="@+id/date"
         android:text="@string/rate"
         android:textSize="18sp" />
 
@@ -106,10 +95,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/season"
-        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/category"
+        android:layout_toRightOf="@+id/category"
         android:ems="10"
-        android:inputType="number"
-        />
+        android:hint="@string/hint"
+        android:inputType="number" />
 
     <Button
         android:id="@+id/btnSave"
@@ -155,6 +145,17 @@
         android:layout_toRightOf="@+id/note_text"
         android:ems="10"
         android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/price"
+        android:layout_toLeftOf="@+id/season"
+        android:layout_toStartOf="@+id/season"
+        android:text="@string/selectdate"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
 
 
 </RelativeLayout>

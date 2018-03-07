@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
     >
 
@@ -21,43 +20,33 @@
         android:layout_alignLeft="@+id/kind"
         android:layout_alignStart="@+id/kind"
         android:layout_below="@+id/kind"
-        android:layout_marginTop="18dp" />
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/price_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/worn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/category"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
         android:text="@string/price"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/price_text"
-        android:layout_alignLeft="@+id/season"
-        android:layout_alignStart="@+id/season"
+        android:layout_toEndOf="@+id/note_text"
+        android:layout_toRightOf="@+id/note_text"
         android:ems="10"
         android:inputType="number" />
 
-    <EditText
-        android:id="@+id/brand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/brand_text"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="" />
-
     <TextView
-        android:id="@+id/brand_text"
+        android:id="@+id/worn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/season_text"
@@ -72,21 +61,11 @@
         android:id="@+id/season_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/brand_text"
-        android:layout_alignStart="@+id/brand_text"
+        android:layout_alignLeft="@+id/worn"
+        android:layout_alignStart="@+id/worn"
         android:layout_centerVertical="true"
         android:text="@string/season"
         android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/season"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/brand"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="" />
 
     <TextView
         android:id="@+id/rate_text"
@@ -110,7 +89,8 @@
         android:layout_toRightOf="@+id/rate_text"
         android:ems="10"
         android:inputType="number"
-        tools:ignore="UnknownId" />
+        android:hint="@string/hint"
+         />
 
     <TextView
         android:id="@+id/note_text"
@@ -153,6 +133,32 @@
         android:layout_alignEnd="@+id/note"
         android:layout_alignRight="@+id/note"
         android:text="@string/cancel" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/worn"
+        android:layout_alignBottom="@+id/worn"
+        android:layout_toEndOf="@+id/rate_text"
+        android:layout_toRightOf="@+id/rate_text"
+        android:text="@string/selectdate"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/season_text"
+        android:layout_alignBottom="@+id/season_text"
+        android:layout_alignLeft="@+id/date"
+        android:layout_alignStart="@+id/date"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
 
 
 </RelativeLayout>
