@@ -34,8 +34,6 @@
     <string name="cancel">Cancel</string>
 
 
-
-
     <string-array name="Kind">
         <item>All</item>
         <item>Top</item>
@@ -84,5 +82,8 @@
         <item>Sunglasses</item>
         <item>Watches</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

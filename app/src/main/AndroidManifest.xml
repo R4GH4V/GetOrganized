@@ -28,6 +28,7 @@
             android:name=".SubmenuActivity"
             android:label="Menu"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ItemActivity"></activity>
     </application>
 
 </manifest>
