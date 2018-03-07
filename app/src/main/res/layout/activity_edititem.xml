@@ -64,7 +64,7 @@
         android:layout_alignEnd="@+id/price_text"
         android:layout_alignRight="@+id/price_text"
         android:layout_marginBottom="15dp"
-        android:text="@string/brand"
+        android:text="@string/worn"
         android:textSize="20sp" />
 
 
