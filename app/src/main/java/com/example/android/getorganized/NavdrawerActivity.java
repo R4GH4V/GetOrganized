@@ -61,7 +61,7 @@ public class NavdrawerActivity extends NavDrawerBaseActivity {
 //            fragment=new CalendarFragment();
 //        } else if (id == R.id.shop) {
 //            fragment=new ShopFragment();
-//        } else if (id == R.id.menu) {
+//        } else if (id == R.id.action_bar) {
 //            fragment=new MenuFragment();
 //        }
 //

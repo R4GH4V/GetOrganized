@@ -41,6 +41,8 @@
     <string name="bottom">Bottom</string>
     <string name="footwear">Footwear</string>
     <string name="accessories">Accessories</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
 
     <string-array name="Kind">
         <item>All</item>

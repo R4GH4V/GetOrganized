@@ -11,6 +11,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -30,8 +33,6 @@ import static android.app.Activity.RESULT_OK;
 public class ClosetFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private DatabaseHandler db;
-    private Button gallery_btn;
-    private Button camera_btn;
     private GridView gridView;
     private GridViewAdapter gridAdapter;
     private Bitmap bp;
@@ -42,15 +43,38 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container,savedInstanceState);
+        setHasOptionsMenu(true);
         return inflater.inflate(R.layout.fragment_closet, container, false);
+    }
+    //ActionBar Button Logic:
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id= item.getItemId();
+        //ActionBar Click handling
+        if(id==R.id.ac_camera)
+        {
+            callCamera();
+        }
+        if(id==R.id.ac_gallery)
+        {
+            callGallery();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.action_bar,menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         // super.onActivityCreated(savedInstanceState);
 
-        spinner1 = (Spinner) getView().findViewById(R.id.spinner1);
-        spinner2 = (Spinner) getView().findViewById(R.id.spinner2);
+        spinner1 = getView().findViewById(R.id.spinner1);
+        spinner2 = getView().findViewById(R.id.spinner2);
         ArrayAdapter adapter1 = ArrayAdapter.createFromResource(getActivity(), R.array.Kind, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter1);
@@ -61,11 +85,12 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
 
         db = new DatabaseHandler(getActivity());
 
-        gallery_btn = (Button)getView().findViewById(R.id.btn_gallery);
-        camera_btn = (Button)getView().findViewById(R.id.btn_camera);
+
 
         // show all items at first
         showRecords("All", "");
+
+
 
     }
 
@@ -73,18 +98,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     public void onStart() {
         super.onStart();
 
-        gallery_btn = (Button)getActivity().findViewById(R.id.btn_gallery);
-        gallery_btn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                callGallery();
-            }
-        });
-        camera_btn = (Button)getActivity().findViewById(R.id.btn_camera);
-        camera_btn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                callCamera();
-            }
-        });
+
 
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
