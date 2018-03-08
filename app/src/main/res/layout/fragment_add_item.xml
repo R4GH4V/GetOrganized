@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
         
         <TextView
-            android:text="Kind"
+            android:text="@string/kind"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Category"
+            android:text="@string/category"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Price"
+            android:text="@string/price"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Season"
+            android:text="@string/season"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -101,25 +101,27 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="Wear Date: "
-            android:gravity="center"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/worn" />
 
         <!-- *****Should be a datepicker***** -->
         <TextView
             android:id="@+id/dp_addweardate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:hint="@string/selectdate"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_add"
-        android:text="add"
+        android:text="@string/add"
         android:background="#1e90ff"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"

@@ -32,8 +32,6 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     private DatabaseHandler db;
     private Button gallery_btn;
     private Button camera_btn;
-    //private ListView lv;
-    //private dataAdapter data;
     private GridView gridView;
     private GridViewAdapter gridAdapter;
     private Bitmap bp;

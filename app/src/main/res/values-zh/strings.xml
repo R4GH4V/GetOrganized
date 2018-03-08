@@ -19,11 +19,11 @@
     <string name="rating">您的评分将出现在这里。</string>
     <string name="submit">提交</string>
     <string name="yourrating">您的评分是：</string>
-    <string name="kind">大类</string>
-    <string name="category">类别</string>
+    <string name="kind">大类:</string>
+    <string name="category">类别:</string>
     <string name="email_feedback">给予反馈</string>
     <string name="price">价格:</string>
-    <string name="worn">磨损的:</string>
+    <string name="worn">佩戴日期:</string>
     <string name="season">赛季:</string>
     <string name="rate">费率项:</string>
     <string name="note">备注:</string>
@@ -31,6 +31,8 @@
     <string name="cancel">取消</string>
     <string name="selectdate">选择日期</string>
     <string name="hint">出5</string>
+    <string name="delete">删除</string>
+    <string name="add">添加</string>
 
 
     <string-array name="Kind">
