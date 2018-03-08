@@ -29,6 +29,7 @@ import java.io.ByteArrayOutputStream;
 /*
     AddItemFragment: to add an item to the database
     shows after taking/choosing pictures
+    attached to ItemActivity
  */
 
 public class AddItemFragment extends Fragment implements AdapterView.OnItemSelectedListener {
