@@ -186,4 +186,38 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return item;
     }
+
+    // Count rows: for statistics
+    public int getCount(String kind) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String countQuery;
+        if (kind.equals("All")) {  // all rows
+            countQuery = "SELECT  * FROM " + TABLE_ITEMS;
+        } else {  // count of each kind
+            countQuery = "SELECT  * FROM " + TABLE_ITEMS + " WHERE " + KEY_KIND + " = '" + kind + "'";
+        }
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int count = cursor.getCount();
+        cursor.close();
+        return count;
+    }
+
+    // Get sum of columns of one kind
+    public int getSum(String kind) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String sumQuery;
+        if (kind.equals("All")) {
+            sumQuery = "SELECT SUM(" + KEY_PRICE + ") FROM " + TABLE_ITEMS;
+        } else {
+            sumQuery = "SELECT SUM(" + KEY_PRICE + ") FROM " + TABLE_ITEMS +
+                    " WHERE " + KEY_KIND + " = '" + kind + "'";
+        }
+        Cursor cursor = db.rawQuery(sumQuery, null);
+        if (cursor.moveToFirst()) {
+            return cursor.getInt(0);
+        }
+        return 0;
+    }
 }
