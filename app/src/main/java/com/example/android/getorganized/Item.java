@@ -88,6 +88,6 @@ public class Item {
     public void setPrice(int price) { this._price = price; }
 
     public String getSeason() { return this._season; }
-    public void setSeason(String season) { this._kind = season; }
+    public void setSeason(String season) { this._season = season; }
 
 }

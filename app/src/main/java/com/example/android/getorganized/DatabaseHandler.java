@@ -5,12 +5,15 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class DatabaseHandler extends SQLiteOpenHelper {
+
+    private static final String DEBUG_TAG = "DatabaseHandler";
 
     // Database Version
     private static final int DATABASE_VERSION = 1;
@@ -22,7 +25,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String TABLE_ITEMS = "items";  //TABLE_CONTACTS="contacts"
 
     // Table Columns names
-    private static final String KEY_ID = "id";
+    private static final String KEY_ID = "_id";
     private static final String KEY_IMAGE = "image";
     private static final String KEY_KIND = "kind";
     private static final String KEY_CATEGORY = "category";
@@ -67,11 +70,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values=new ContentValues();
 
+        Log.d(DEBUG_TAG, "season before adding: " + item.getSeason());
+
         values.put(KEY_IMAGE, item.getImage());
         values.put(KEY_KIND, item.getKind());
         values.put(KEY_CATEGORY, item.getCategory());
         values.put(KEY_PRICE, item.getPrice());
         values.put(KEY_SEASON, item.getSeason());
+
 
         long result = db.insert(TABLE_ITEMS, null, values);
         return (result != -1);
@@ -108,8 +114,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
     // Updating single item
-    public int updateItem(Item item, int id) {
+    public boolean updateItem(Item item, int id) {
         SQLiteDatabase db = this.getWritableDatabase();
+
+        Log.d(DEBUG_TAG, "kind before update: " + item.getKind());
 
         ContentValues values = new ContentValues();
         values.put(KEY_IMAGE, item.getImage());
@@ -119,8 +127,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_SEASON, item.getSeason());
 
         // updating row
-        return db.update(TABLE_ITEMS, values, KEY_ID + " = ?",
+        db.update(TABLE_ITEMS, values, KEY_ID + " = ?",
                 new String[] { String.valueOf(id) });
+
+        Log.d(DEBUG_TAG, "kind after update: " + item.getKind());
+
+        return true;
     }
 
 

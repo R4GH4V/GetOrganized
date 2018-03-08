@@ -91,8 +91,8 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String sp1= String.valueOf(spinner1.getSelectedItem());
-        Toast.makeText(getActivity(), sp1, Toast.LENGTH_SHORT).show();
-        if(sp1.contentEquals("Top") || sp1.contentEquals("上衣")) {
+        //Toast.makeText(getActivity(), sp1, Toast.LENGTH_SHORT).show();
+        if(sp1.contentEquals("Top") || sp1.contentEquals("上装")) {
             ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Top, android.R.layout.simple_spinner_item);
             spinner2.setAdapter(adapter2);
         }
@@ -265,21 +265,11 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
 
     //Retrieve data from the database and set to the list view
     private void showRecords(){  //change to gridView
-        //final ArrayList<Item> items = new ArrayList<>(db.getAllItems());
         ArrayList<Item> itemArray = new ArrayList<Item>();
         List<Item> items = db.getAllItems();
         for (Item item : items) {
             itemArray.add(item);
         }
-        //Byte[] image_array = new Byte[0];
-        //ArrayList image_list = new ArrayList(Arrays.asList(image_array));
-
-//        ArrayList image_list = new ArrayList();
-
-//        for (Item item: items) {
-//            byte[] data = item.getImage();
-//            image_list.add(BitmapFactory.decodeByteArray(data, 0, data.length));
-//        }
 
         gridView = (GridView) getActivity().findViewById(R.id.gridview);
 

@@ -23,14 +23,14 @@
             android:text="Kind: "
             android:gravity="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
-        <!-- ***** need to change edittext to spinner ***** -->
-        <EditText
-            android:id="@+id/editkind"
+        <Spinner
+            android:id="@+id/sp_editkind"
             android:layout_weight="2"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -45,14 +45,14 @@
             android:text="Category: "
             android:gravity="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
-        <!-- ***** need to change edittext to spinner ***** -->
-        <EditText
-            android:id="@+id/editcategory"
+        <Spinner
+            android:id="@+id/sp_editcategory"
             android:layout_weight="2"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -67,15 +67,16 @@
             android:text="Price: "
             android:gravity="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
         <!-- price need to be an integer -->
         <EditText
-            android:id="@+id/editprice"
+            android:id="@+id/et_editprice"
             android:inputType="number"
             android:layout_weight="2"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -90,14 +91,37 @@
             android:text="Season: "
             android:gravity="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
-        <!-- ***** need to change edittext to spinner ***** -->
-        <EditText
-            android:id="@+id/editseason"
+        <Spinner
+            android:id="@+id/sp_editseason"
             android:layout_weight="2"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Wear Date: "
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <!-- *****Should be a datepicker***** -->
+        <TextView
+            android:id="@+id/dp_editweardate"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
