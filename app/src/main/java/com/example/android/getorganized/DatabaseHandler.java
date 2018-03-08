@@ -87,7 +87,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     // Getting All Items
     public List<Item> getAllItems() {List<Item> itemList = new ArrayList<Item>();
-        // Select All Query
+       // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_ITEMS;
 
         SQLiteDatabase db = this.getWritableDatabase();

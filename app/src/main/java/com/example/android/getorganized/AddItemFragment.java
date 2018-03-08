@@ -55,13 +55,15 @@ public class AddItemFragment extends Fragment implements AdapterView.OnItemSelec
     public void onViewCreated(View view, Bundle savedInstanceState) {
         price_et = getActivity().findViewById(R.id.et_addprice);
 
+        // kind spinner
         kind_sp = getActivity().findViewById(R.id.sp_addkind);
         category_sp = getActivity().findViewById(R.id.sp_addcategory);
-        ArrayAdapter adapter_kind = ArrayAdapter.createFromResource(getActivity(), R.array.Kind, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter_kind = ArrayAdapter.createFromResource(getActivity(), R.array.Kind_no_all, android.R.layout.simple_spinner_item);
         adapter_kind.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kind_sp.setAdapter(adapter_kind);
         kind_sp.setOnItemSelectedListener(this);
 
+        // season spinner
         season_sp = getActivity().findViewById(R.id.sp_addseason);
         ArrayAdapter adapter_se = ArrayAdapter.createFromResource(getActivity(), R.array.Season, android.R.layout.simple_spinner_item);
         adapter_se.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -73,19 +75,19 @@ public class AddItemFragment extends Fragment implements AdapterView.OnItemSelec
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String sp1= String.valueOf(kind_sp.getSelectedItem());
         if(sp1.contentEquals("Top") || sp1.contentEquals("上装")) {
-            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Top, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Top_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter_ca);
         }
         if(sp1.contentEquals("Bottom") || sp1.contentEquals("下装")){
-            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Bottom, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Bottom_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter_ca);
         }
         if(sp1.contentEquals("Footwear") || sp1.contentEquals("鞋类")){
-            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Footwear, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Footwear_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter_ca);
         }
         if(sp1.contentEquals("Accessories") || sp1.contentEquals("配饰")){
-            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Accessories, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter_ca = ArrayAdapter.createFromResource(getActivity(),R.array.Accessories_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter_ca);
         }
     }

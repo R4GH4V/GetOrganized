@@ -44,8 +44,26 @@
         <item>Accessories</item>
     </string-array>
 
+    <!-- remove "all" for AddItem and EditItem -->
+    <string-array name="Kind_no_all">
+        <item>Top</item>
+        <item>Bottom</item>
+        <item>Footwear</item>
+        <item>Accessories</item>
+    </string-array>
+
     <string-array name="Top">
         <item>All</item>
+        <item>Blazers and Suiting</item>
+        <item>Coats and Jackets</item>
+        <item>Dresses</item>
+        <item>Shirts</item>
+        <item>Sweaters</item>
+        <item>Sweatshirts</item>
+        <item>T-shirts</item>
+    </string-array>
+
+    <string-array name="Top_no_all">
         <item>Blazers and Suiting</item>
         <item>Coats and Jackets</item>
         <item>Dresses</item>
@@ -63,6 +81,13 @@
         <item>Trousers</item>
     </string-array>
 
+    <string-array name="Bottom_no_all">
+        <item>Jeans</item>
+        <item>Shorts</item>
+        <item>Skirts</item>
+        <item>Trousers</item>
+    </string-array>
+
     <string-array name="Footwear">
         <item>All</item>
         <item>Athletic</item>
@@ -72,8 +97,28 @@
         <item>Sandals</item>
     </string-array>
 
+    <string-array name="Footwear_no_all">
+        <item>Athletic</item>
+        <item>Boots</item>
+        <item>Flats</item>
+        <item>Heels</item>
+        <item>Sandals</item>
+    </string-array>
+
     <string-array name="Accessories">
         <item>All</item>
+        <item>Bags</item>
+        <item>Belts</item>
+        <item>Gloves</item>
+        <item>Hats</item>
+        <item>Jewellery</item>
+        <item>Scarves</item>
+        <item>Socks</item>
+        <item>Sunglasses</item>
+        <item>Watches</item>
+    </string-array>
+
+    <string-array name="Accessories_no_all">
         <item>Bags</item>
         <item>Belts</item>
         <item>Gloves</item>

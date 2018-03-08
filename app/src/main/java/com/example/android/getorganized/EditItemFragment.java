@@ -67,7 +67,7 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
         season_sp.setAdapter(adapter_se);
 
         // adapter for kind spinner
-        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(getActivity(), R.array.Kind, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(getActivity(), R.array.Kind_no_all, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kind_sp.setAdapter(adapter1);
         kind_sp.setOnItemSelectedListener(this);
@@ -78,19 +78,19 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String sp1= String.valueOf(kind_sp.getSelectedItem());
         if(sp1.contentEquals("Top") || sp1.contentEquals("上装")) {
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Top, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Top_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter2);
         }
         if(sp1.contentEquals("Bottom") || sp1.contentEquals("下装")){
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Bottom, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Bottom_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter2);
         }
         if(sp1.contentEquals("Footwear") || sp1.contentEquals("鞋类")){
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Footwear, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Footwear_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter2);
         }
         if(sp1.contentEquals("Accessories") || sp1.contentEquals("配饰")){
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Accessories, android.R.layout.simple_spinner_item);
+            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Accessories_no_all, android.R.layout.simple_spinner_item);
             category_sp.setAdapter(adapter2);
         }
     }
