@@ -66,7 +66,8 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
         gallery_btn = (Button)getView().findViewById(R.id.btn_gallery);
         camera_btn = (Button)getView().findViewById(R.id.btn_camera);
 
-        showRecords();
+        // show all items at first
+        showRecords("All", "");
 
     }
 
@@ -86,56 +87,67 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
                 callCamera();
             }
         });
+
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String sp2 = String.valueOf(spinner2.getSelectedItem());
+                if(!sp2.equals("All")) {
+                    showRecords("", sp2);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String sp1= String.valueOf(spinner1.getSelectedItem());
-        //Toast.makeText(getActivity(), sp1, Toast.LENGTH_SHORT).show();
-        if(sp1.contentEquals("Top") || sp1.contentEquals("上装")) {
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Top, android.R.layout.simple_spinner_item);
-            spinner2.setAdapter(adapter2);
-        }
-        if(sp1.contentEquals("Bottom") || sp1.contentEquals("下装")){
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Bottom, android.R.layout.simple_spinner_item);
-            spinner2.setAdapter(adapter2);
-        }
-        if(sp1.contentEquals("Footwear") || sp1.contentEquals("鞋类")){
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Footwear, android.R.layout.simple_spinner_item);
-            spinner2.setAdapter(adapter2);
-        }
-        if(sp1.contentEquals("Accessories") || sp1.contentEquals("配饰")){
-            ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.Accessories, android.R.layout.simple_spinner_item);
-            spinner2.setAdapter(adapter2);
+
+        switch(adapterView.getId()) {
+
+            case R.id.spinner1:
+
+                String sp1 = String.valueOf(spinner1.getSelectedItem());
+
+                showRecords(sp1, "All");
+
+                //Toast.makeText(getActivity(), sp1, Toast.LENGTH_SHORT).show();
+                if (sp1.contentEquals("Top") || sp1.contentEquals("上装")) {
+                    ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Top, android.R.layout.simple_spinner_item);
+                    spinner2.setAdapter(adapter2);
+                }
+                if (sp1.contentEquals("Bottom") || sp1.contentEquals("下装")) {
+                    ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Bottom, android.R.layout.simple_spinner_item);
+                    spinner2.setAdapter(adapter2);
+                }
+                if (sp1.contentEquals("Footwear") || sp1.contentEquals("鞋类")) {
+                    ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Footwear, android.R.layout.simple_spinner_item);
+                    spinner2.setAdapter(adapter2);
+                }
+                if (sp1.contentEquals("Accessories") || sp1.contentEquals("配饰")) {
+                    ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Accessories, android.R.layout.simple_spinner_item);
+                    spinner2.setAdapter(adapter2);
+                }
+
+            case R.id.spinner2:
+                String spi1 = String.valueOf(spinner1.getSelectedItem());
+                String sp2 = String.valueOf(spinner2.getSelectedItem());
+                showRecords(spi1, sp2);   // in gridview, show images within this kind and category
+
         }
     }
+
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
         //Do nothing
     }
 
-
-
-//    public void galleryClicked(View v) {
-//        //int id = v.getId();
-//
-//        //switch(id){
-//        //    case R.id.btn_gallery:  // to select image from gallery
-//        if (v.getId() == R.id.btn_gallery) {
-//            callGallery();
-//        }
-//        //        break;
-//    }
-//
-//    public void cameraClicked(View v) {
-//        //case R.id.btn_camera:  // use camera to take pics
-//        if (v.getId() == R.id.btn_camera) {
-//            callCamera();
-//        }
-//        //break;
-//
-//    }
 
     public void callGallery(){
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
@@ -264,9 +276,9 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
 
 
     //Retrieve data from the database and set to the list view
-    private void showRecords(){  //change to gridView
+    private void showRecords(String kind, String category){  //change to gridView
         ArrayList<Item> itemArray = new ArrayList<Item>();
-        List<Item> items = db.getAllItems();
+        List<Item> items = db.getAllItems(kind, category);
         for (Item item : items) {
             itemArray.add(item);
         }

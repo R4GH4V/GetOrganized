@@ -85,10 +85,19 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-    // Getting All Items
-    public List<Item> getAllItems() {List<Item> itemList = new ArrayList<Item>();
-       // Select All Query
-        String selectQuery = "SELECT  * FROM " + TABLE_ITEMS;
+    // Getting All Items, for showing images in the gridview
+    public List<Item> getAllItems(String kind, String category) {List<Item> itemList = new ArrayList<Item>();
+        Log.d(DEBUG_TAG, "kind, category: " + kind + category);
+
+        String selectQuery;
+        if (kind.equals("All")) { // Select All Query
+            selectQuery = "SELECT  * FROM " + TABLE_ITEMS;
+        } else if (category.equals("All")){
+            selectQuery = "SELECT  * FROM " + TABLE_ITEMS + " WHERE " + KEY_KIND + " = '" + kind + "'";
+        } else {
+            selectQuery = "SELECT  * FROM " + TABLE_ITEMS +
+                    " WHERE " + KEY_CATEGORY + " = '" + category + "'";
+        }
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
