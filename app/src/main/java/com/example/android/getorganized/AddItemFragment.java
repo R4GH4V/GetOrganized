@@ -66,7 +66,6 @@ public class AddItemFragment extends Fragment implements AdapterView.OnItemSelec
         ArrayAdapter adapter_se = ArrayAdapter.createFromResource(getActivity(), R.array.Season, android.R.layout.simple_spinner_item);
         adapter_se.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         season_sp.setAdapter(adapter_se);
-        season_sp.setOnItemSelectedListener(this);
     }
 
     // for Spinner

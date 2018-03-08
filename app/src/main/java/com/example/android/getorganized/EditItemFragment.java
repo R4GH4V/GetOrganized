@@ -65,7 +65,6 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
         ArrayAdapter adapter_se = ArrayAdapter.createFromResource(getActivity(), R.array.Season, android.R.layout.simple_spinner_item);
         adapter_se.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         season_sp.setAdapter(adapter_se);
-        season_sp.setOnItemSelectedListener(this);
 
         // adapter for kind spinner
         ArrayAdapter adapter1 = ArrayAdapter.createFromResource(getActivity(), R.array.Kind, android.R.layout.simple_spinner_item);
@@ -129,13 +128,13 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
         kind_sp.setSelection(pos1);
 
         ArrayAdapter adapter2 = (ArrayAdapter) kind_sp.getAdapter();
-        int pos2 = adapter1.getPosition(item.getKind());
+        int pos2 = adapter2.getPosition(item.getCategory());
         category_sp.setSelection(pos2);
 
         price_et.setText(String.valueOf(item.getPrice()));
 
         ArrayAdapter adapter4 = (ArrayAdapter) kind_sp.getAdapter();
-        int pos4 = adapter4.getPosition(item.getKind());
+        int pos4 = adapter4.getPosition(item.getSeason());
         kind_sp.setSelection(pos4);
 
 
