@@ -22,32 +22,22 @@
     <string name="rating">Your rating will appear here.</string>
     <string name="submit">Submit</string>
     <string name="yourrating">Your rating is: </string>
-    <string name="kind">Kind:</string>
-    <string name="category">Category:</string>
+    <string name="kind">Kind</string>
+    <string name="category">Category</string>
     <string name="email_feedback">Give Feedback</string>
     <string name="price">Price:</string>
-    <string name="worn">Wear Date:</string>
-    <string name="season">Season:</string>
-    <string name="rate">Rate item:</string>
-    <string name="note">Notes:</string>
+    <string name="brand">Brand</string>
+    <string name="season">Season</string>
+    <string name="rate">Rate item</string>
+    <string name="note">Notes</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
-    <string name="selectdate">Select a date.</string>
-    <string name="hint">out of 5</string>
-    <string name="delete">Delete</string>
-    <string name="add">Add</string>
+
+
 
 
     <string-array name="Kind">
         <item>All</item>
-        <item>Top</item>
-        <item>Bottom</item>
-        <item>Footwear</item>
-        <item>Accessories</item>
-    </string-array>
-
-    <!-- remove "all" for AddItem and EditItem -->
-    <string-array name="Kind_no_all">
         <item>Top</item>
         <item>Bottom</item>
         <item>Footwear</item>
@@ -65,16 +55,6 @@
         <item>T-shirts</item>
     </string-array>
 
-    <string-array name="Top_no_all">
-        <item>Blazers and Suiting</item>
-        <item>Coats and Jackets</item>
-        <item>Dresses</item>
-        <item>Shirts</item>
-        <item>Sweaters</item>
-        <item>Sweatshirts</item>
-        <item>T-shirts</item>
-    </string-array>
-
     <string-array name="Bottom">
         <item>All</item>
         <item>Jeans</item>
@@ -83,23 +63,8 @@
         <item>Trousers</item>
     </string-array>
 
-    <string-array name="Bottom_no_all">
-        <item>Jeans</item>
-        <item>Shorts</item>
-        <item>Skirts</item>
-        <item>Trousers</item>
-    </string-array>
-
     <string-array name="Footwear">
         <item>All</item>
-        <item>Athletic</item>
-        <item>Boots</item>
-        <item>Flats</item>
-        <item>Heels</item>
-        <item>Sandals</item>
-    </string-array>
-
-    <string-array name="Footwear_no_all">
         <item>Athletic</item>
         <item>Boots</item>
         <item>Flats</item>
@@ -118,25 +83,6 @@
         <item>Socks</item>
         <item>Sunglasses</item>
         <item>Watches</item>
-    </string-array>
-
-    <string-array name="Accessories_no_all">
-        <item>Bags</item>
-        <item>Belts</item>
-        <item>Gloves</item>
-        <item>Hats</item>
-        <item>Jewellery</item>
-        <item>Scarves</item>
-        <item>Socks</item>
-        <item>Sunglasses</item>
-        <item>Watches</item>
-    </string-array>
-
-    <string-array name="Season">
-        <item>Spring</item>
-        <item>Summer</item>
-        <item>Autumn</item>
-        <item>Winter</item>
     </string-array>
 
 </resources>
