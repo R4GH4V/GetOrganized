@@ -1,9 +1,9 @@
 package com.example.android.getorganized;
 
-
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,10 @@ import java.io.ByteArrayOutputStream;
 
 import static java.lang.Integer.getInteger;
 
+/*
+    AddItemFragment: to add an item to the database
+    shows after taking/choosing pictures
+ */
 
 public class AddItemFragment extends Fragment {
 
@@ -98,7 +103,38 @@ public class AddItemFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), NavdrawerActivity.class);
         startActivity(intent);
-    }
 
+        /*
+        // to view the whole database in an AlertDialog
+        Cursor res = db.dbViewData();
+        if (res.getCount() == 0) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setCancelable(true);
+            builder.setTitle("Error");
+            builder.setMessage("Nothing found");
+            builder.show();
+
+            return;
+        }
+
+        StringBuffer buffer = new StringBuffer();
+        while (res.moveToNext()) {
+            buffer.append("ID: " + res.getString(0) + "\n");
+            buffer.append("image byte[]: " + res.getBlob(1) + "\n");
+            buffer.append("kind: " + res.getString(2) + "\n");
+            buffer.append("category: " + res.getString(3) + "\n");
+            buffer.append("price: " + res.getString(4) + "\n");
+            buffer.append("season: " + res.getString(5) + "\n");
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setCancelable(true);
+        builder.setTitle("All Stored Data:");
+        builder.setMessage(buffer.toString());
+        builder.show();
+        */
+
+
+    }
 
 }

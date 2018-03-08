@@ -14,7 +14,7 @@ public class ItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item);
 
         Intent intent = getIntent();
-        String add_or_edit = intent.getStringExtra("add_or_edit");
+        String add_or_edit = intent.getStringExtra("add_show_edit");
 
         if (add_or_edit.equals("add")) {
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -23,11 +23,18 @@ public class ItemActivity extends AppCompatActivity {
             ft.commit();
         }
 
-        //if (add_or_edit.equals("edit")) {
-        //    FragmentManager fragmentManager = getSupportFragmentManager();
-        //    FragmentTransaction ft = fragmentManager.beginTransaction();
-        //    ft.replace(R.id.item_fragment_container, new EditItemFragment());
-        //    ft.commit();
-        //}
+        if (add_or_edit.equals("show")) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            ft.replace(R.id.item_fragment_container, new ShowItemFragment());
+            ft.commit();
+        }
+
+        if (add_or_edit.equals("edit")) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            ft.replace(R.id.item_fragment_container, new EditItemFragment());
+            ft.commit();
+        }
     }
 }

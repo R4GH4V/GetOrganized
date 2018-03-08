@@ -167,7 +167,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
 
                     Intent intent1 = new Intent(getActivity(), ItemActivity.class);
                     intent1.putExtra("image", byteArray1);
-                    intent1.putExtra("add_or_edit", "add");
+                    intent1.putExtra("add_show_edit", "add");
                     startActivity(intent1);
 
                 }
@@ -207,7 +207,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
 
                         Intent intent2 = new Intent(getActivity(), ItemActivity.class);
                         intent2.putExtra("image", byteArray2);
-                        intent2.putExtra("add_or_edit", "add");
+                        intent2.putExtra("add_show_edit", "add");
                         startActivity(intent2);
 
                     }
@@ -283,13 +283,10 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
 
         gridView = (GridView) getActivity().findViewById(R.id.gridview);
 
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-//                android.R.layout.simple_list_item_1, image_list);
-//
-//        gridView.setAdapter(adapter);
-
         gridAdapter = new GridViewAdapter(getActivity(), R.layout.grid_item_layout, itemArray);//an arraylist of );
         gridView.setAdapter(gridAdapter);
+
+        // set click listener for each image in the grid view, will open ShowItemFragment
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
@@ -298,9 +295,8 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
                 // pass the item id as an intent to ItemActivity
                 Intent intent = new Intent(getActivity(), ItemActivity.class);
                 intent.putExtra("item_id", item.getID());
-                intent.putExtra("add_or_edit", "edit");
+                intent.putExtra("add_show_edit", "show");
                 startActivity(intent);
-                //Toast.makeText(getApplicationContext(), ((TextView) v).getText(), Toast.LENGTH_SHORT).show();
             }
         });
     }

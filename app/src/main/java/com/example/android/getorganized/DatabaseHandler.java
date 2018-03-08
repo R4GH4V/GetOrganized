@@ -18,13 +18,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Database Name
     private static final String DATABASE_NAME = "itemsManager";  //"contactsManager"
 
-    // Contacts table name
+    // Table name
     private static final String TABLE_ITEMS = "items";  //TABLE_CONTACTS="contacts"
 
-    // Contacts Table Columns names
+    // Table Columns names
     private static final String KEY_ID = "id";
-    //private static final String KEY_FNAME = "fname";
-    private static final String KEY_IMAGE = "image";  //KEY_POTO, "poto"
+    private static final String KEY_IMAGE = "image";
     private static final String KEY_KIND = "kind";
     private static final String KEY_CATEGORY = "category";
     private static final String KEY_PRICE = "price";
@@ -34,6 +33,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
 
     //Create tables
     @Override
@@ -47,22 +47,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + KEY_SEASON + " TEXT);");
     }
 
+
     // Upgrading database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_ITEMS);
-
-        // Create tables again
         onCreate(db);
     }
+
 
     /**
      * All CRUD(Create, Read, Update, Delete) Operations
      */
 
-    //Insert values to the table items
+    // Insert values to the table items
     // return a boolean, true -> successfully inserted, false -> not inserted
     public boolean addItem(Item item){   //addContacts(Item contact)
         SQLiteDatabase db = this.getWritableDatabase();
@@ -93,19 +92,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             do {
                 Item item = new Item();
                 item.setID(Integer.parseInt(cursor.getString(0)));
-                //item.setFName(cursor.getString(1));
                 item.setImage(cursor.getBlob(1));
                 item.setKind(cursor.getString(2));
                 item.setCategory(cursor.getString(3));
-                item.setPrice(Integer.parseInt(cursor.getString(4)));   // price: Int
-                item.setSeason(cursor.getString(5));   // need to be completed
+                item.setPrice(Integer.parseInt(cursor.getString(4)));
+                item.setSeason(cursor.getString(5));
 
                 // Adding item to list
                 itemList.add(item);
             } while (cursor.moveToNext());
         }
 
-        // return contact list
         return itemList;
     }
 
@@ -115,7 +112,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        //values.put(KEY_FNAME, item.getFName());
         values.put(KEY_IMAGE, item.getImage());
         values.put(KEY_KIND, item.getKind());
         values.put(KEY_CATEGORY, item.getCategory());
@@ -127,19 +123,46 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 new String[] { String.valueOf(id) });
     }
 
+
     // Deleting single contactItem
     public void deleteItem(int Id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_ITEMS, KEY_ID + " = ?",
-                new String[] { String.valueOf(Id) });
+        db.delete(TABLE_ITEMS, KEY_ID + " = ?", new String[] { String.valueOf(Id) });
         db.close();
     }
 
 
+    // Viewing all data
     public Cursor dbViewData() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from " + TABLE_ITEMS, null);
         return cursor;
     }
 
+
+    // Retrieve one Item according to the unique id
+    public Item getOneItem(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_ITEMS,
+                new String[] {KEY_ID, KEY_IMAGE, KEY_KIND, KEY_CATEGORY, KEY_PRICE, KEY_SEASON},
+                KEY_ID + "=?", new String[] {String.valueOf(id)},
+                null, null, null, null);
+
+        Item item = new Item();
+
+        if (cursor != null && cursor.moveToFirst()) {
+
+            item.setID(Integer.parseInt(cursor.getString(0)));
+            item.setImage(cursor.getBlob(1));
+            item.setKind(cursor.getString(2));
+            item.setCategory(cursor.getString(3));
+            item.setPrice(Integer.parseInt(cursor.getString(4)));
+            item.setSeason(cursor.getString(5));
+
+            cursor.close();
+        }
+
+        return item;
+    }
 }
