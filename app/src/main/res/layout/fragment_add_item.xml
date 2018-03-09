@@ -20,7 +20,7 @@
 
         <Spinner
             android:id="@+id/sp_addkind"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_weight="2"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
@@ -43,7 +43,7 @@
         <Spinner
             android:id="@+id/sp_addcategory"
             android:layout_weight="2"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
@@ -66,7 +66,7 @@
             android:id="@+id/et_addprice"
             android:inputType="number"
             android:layout_weight="2"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
@@ -88,36 +88,12 @@
         <Spinner
             android:id="@+id/sp_addseason"
             android:layout_weight="2"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/worn" />
-
-        <!-- *****Should be a datepicker***** -->
-        <TextView
-            android:id="@+id/dp_addweardate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:hint="@string/selectdate"
-            android:textStyle="bold" />
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/btn_add"

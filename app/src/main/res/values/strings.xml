@@ -43,6 +43,8 @@
     <string name="accessories">Accessories</string>
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
+    <string name="ok">Ok</string>
+    <string name="edit">Edit</string>
 
     <string-array name="Kind">
         <item>All</item>

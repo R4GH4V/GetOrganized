@@ -20,7 +20,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/kind"
+            android:text="Kind: "
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -41,7 +41,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/category"
+            android:text="Category: "
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -62,7 +62,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/price"
+            android:text="Price: "
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -83,7 +83,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/season"
+            android:text="Season: "
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -101,7 +101,7 @@
 
     <Button
         android:id="@+id/btn_showok"
-        android:text="OK"
+        android:text="@string/ok"
         android:background="#9acd32"
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
@@ -110,7 +110,7 @@
 
     <Button
         android:id="@+id/btn_showedit"
-        android:text="Edit"
+        android:text="@string/edit"
         android:background="#1e90ff"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
