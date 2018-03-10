@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="headings">
+    <item>blazer1</item>
+    <item>blazer2</item>
+    <item>blazer3</item>
+    <item>coat1</item>
+    <item>coat2</item>
+    <item>coat3</item>
+    <item>dress1</item>
+    <item>dress2</item>
+    <item>dress3</item>
+    <item>shirtm1</item>
+    <item>shirtm2</item>
+    <item>shirtm3</item>
+    <item>shirtf1</item>
+    <item>shirtf2</item>
+    <item>shirtf3</item>
+    <item>sweaterm1</item>
+    <item>sweaterm2</item>
+    <item>sweaterm3</item>
+</string-array>
+
+    <string-array name="pages">
+        <item>https://tinyurl.com/ydxvkr3p</item>
+        <item>https://tinyurl.com/y6v2efh2</item>
+        <item>https://tinyurl.com/y8sko35v</item>
+        <item>https://tinyurl.com/ya72cctf</item>
+        <item>https://tinyurl.com/y9m3wxg5</item>
+        <item>https://tinyurl.com/y8oq2als</item>
+        <item>https://tinyurl.com/ycev2k8x</item>
+        <item>https://tinyurl.com/ydeyb24a</item>
+        <item>https://tinyurl.com/y7rch36f</item>
+        <item>https://tinyurl.com/ybhhvw74</item>
+        <item>https://tinyurl.com/y9erxvpd</item>
+        <item>https://tinyurl.com/y8nszmaa</item>
+        <item>https://tinyurl.com/yb5ptg9o</item>
+        <item>https://tinyurl.com/ybe89q9a</item>
+        <item>https://tinyurl.com/yafzaxjf</item>
+        <item>https://tinyurl.com/ybmj96so </item>
+        <item>https://tinyurl.com/ycg8umyu</item>
+        <item>https://tinyurl.com/y9ef5q5d</item>
+
+    </string-array>
+
+
+</resources>
