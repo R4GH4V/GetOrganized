@@ -15,6 +15,7 @@ public class HelpFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle(R.string.help);
         return inflater.inflate(R.layout.fragment_help,null);
     }
 }

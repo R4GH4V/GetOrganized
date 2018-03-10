@@ -13,6 +13,11 @@ public class ShopFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        getActivity().setTitle(R.string.shop);
+
         return inflater.inflate(R.layout.fragment_shop,null);
+
+
     }
 }

@@ -6,15 +6,6 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="@string/statistics"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
         android:text="@string/itemcount"
         android:textSize="25dp"
         android:layout_marginTop="20dp"

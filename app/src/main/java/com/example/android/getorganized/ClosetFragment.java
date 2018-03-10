@@ -42,10 +42,14 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container,savedInstanceState);
+
+        // change the title in the toolbar
+        getActivity().setTitle(R.string.closet);
+
         setHasOptionsMenu(true);
         return inflater.inflate(R.layout.fragment_closet, container, false);
     }
+
     //ActionBar Button Logic:
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -80,26 +84,19 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
         spinner1.setAdapter(adapter1);
         spinner1.setOnItemSelectedListener(this);
 
-
         //setContentView(R.layout.fragment_closet);
 
         db = new DatabaseHandler(getActivity());
 
-
-
         // show all items at first
         showRecords("All", "");
-
-
-
     }
 
     @Override
     public void onStart() {
         super.onStart();
 
-
-
+        // for category spinner
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -111,12 +108,13 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                // do nothing
             }
         });
 
     }
 
+    // for kind spinner
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -241,7 +239,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     }
 
 
-    //COnvert and resize our image to 400dp for faster uploading our images to DB
+    //Convert and resize our image to 400dp for faster uploading our images to DB
     public Bitmap decodeUri(Uri selectedImage, int REQUIRED_SIZE) {
 
         try {
