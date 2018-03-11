@@ -89,7 +89,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
         db = new DatabaseHandler(getActivity());
 
         // show all items at first
-        showRecords("All", "");
+        //showRecords("All", "");
     }
 
     @Override
@@ -123,31 +123,37 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
             case R.id.spinner1:
 
                 String sp1 = String.valueOf(spinner1.getSelectedItem());
-
                 showRecords(sp1, "All");
 
-                //Toast.makeText(getActivity(), sp1, Toast.LENGTH_SHORT).show();
+                if (sp1.contentEquals("All") || sp1.contentEquals("全部")) {
+
+                    spinner2.setEnabled(false);
+                }
                 if (sp1.contentEquals("Top") || sp1.contentEquals("上装")) {
+                    spinner2.setEnabled(true);
                     ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Top, android.R.layout.simple_spinner_item);
                     spinner2.setAdapter(adapter2);
                 }
                 if (sp1.contentEquals("Bottom") || sp1.contentEquals("下装")) {
+                    spinner2.setEnabled(true);
                     ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Bottom, android.R.layout.simple_spinner_item);
                     spinner2.setAdapter(adapter2);
                 }
                 if (sp1.contentEquals("Footwear") || sp1.contentEquals("鞋类")) {
+                    spinner2.setEnabled(true);
                     ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Footwear, android.R.layout.simple_spinner_item);
                     spinner2.setAdapter(adapter2);
                 }
                 if (sp1.contentEquals("Accessories") || sp1.contentEquals("配饰")) {
+                    spinner2.setEnabled(true);
                     ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.Accessories, android.R.layout.simple_spinner_item);
                     spinner2.setAdapter(adapter2);
                 }
 
-            case R.id.spinner2:
-                String spi1 = String.valueOf(spinner1.getSelectedItem());
-                String sp2 = String.valueOf(spinner2.getSelectedItem());
-                showRecords(spi1, sp2);   // in gridview, show images within this kind and category
+            //case R.id.spinner2:
+            //    String spi1 = String.valueOf(spinner1.getSelectedItem());
+            //    String sp2 = String.valueOf(spinner2.getSelectedItem());
+            //    showRecords(spi1, sp2);   // in gridview, show images within this kind and category
 
         }
     }

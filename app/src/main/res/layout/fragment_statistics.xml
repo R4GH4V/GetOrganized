@@ -7,7 +7,8 @@
 
     <TextView
         android:text="@string/itemcount"
-        android:textSize="25dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -25,35 +26,35 @@
 
             <TextView
                 android:text="@string/allitems"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/top"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/bottom"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/footwear"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/accessories"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -69,35 +70,35 @@
 
             <TextView
                 android:id="@+id/tv_itemcount"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_topcount"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_bottomcount"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_footwearcount"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_accesscount"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -105,10 +106,17 @@
         </LinearLayout>
     </LinearLayout>
 
+    <View
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryLightest" />
 
     <TextView
         android:text="@string/totalvalue"
-        android:textSize="25dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -126,35 +134,35 @@
 
             <TextView
                 android:text="@string/allitems"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/top"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/bottom"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/footwear"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/accessories"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -170,35 +178,35 @@
 
             <TextView
                 android:id="@+id/tv_itemvalue"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_topvalue"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_bottomvalue"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_footwearvalue"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_accessvalue"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
