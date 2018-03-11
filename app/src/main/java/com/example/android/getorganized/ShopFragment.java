@@ -20,9 +20,16 @@ public class ShopFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActivity().setTitle(R.string.shop);
+        setRetainInstance(true);
         return inflater.inflate(R.layout.fragment_shop,null);
     }
 
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -34,7 +41,7 @@ public class ShopFragment extends Fragment {
 
 
 
-        GridView grid= view.findViewById(R.id.shopGrid);
+        GridView grid= getView().findViewById(R.id.shopGrid);
         ShopGridViewAdapter myAdapter = new ShopGridViewAdapter(getActivity(), labels);
         grid.setAdapter(myAdapter);
 
