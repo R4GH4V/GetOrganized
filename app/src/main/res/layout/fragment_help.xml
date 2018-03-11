@@ -8,7 +8,7 @@
 
     <TextView
         android:text="@string/howtousethisapp"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginTop="10dp"
