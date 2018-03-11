@@ -73,7 +73,7 @@ public class ShopGridViewAdapter extends BaseAdapter {
 
         TextView textHeading = v.findViewById(R.id.shopHeading);
         ImageView thumbnailImage = v.findViewById(R.id.shopImage);
-        thumbnailImage.setLayoutParams(new LinearLayout.LayoutParams(480, 480));
+        thumbnailImage.setLayoutParams(new LinearLayout.LayoutParams(600, 600));
         textHeading.setText(imageLabels[position]);
         thumbnailImage.setImageResource(shopImages[position]);
         return v;
