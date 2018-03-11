@@ -190,7 +190,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
                     Bitmap yourImage = extras.getParcelable("data");
                     // convert bitmap to byte
                     ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                    yourImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    yourImage.compress(Bitmap.CompressFormat.JPEG, 20, stream);
                     byte byteArray1[] = stream.toByteArray();
 
                     Intent intent1 = new Intent(getActivity(), ItemActivity.class);
@@ -230,7 +230,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
                         //image = profileImage(bp);   // image in byte[], passed to AddItemActivity
 
                         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                        bp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                        bp.compress(Bitmap.CompressFormat.JPEG, 20, stream);
                         byte[] byteArray2 = stream.toByteArray();
 
                         Intent intent2 = new Intent(getActivity(), ItemActivity.class);
