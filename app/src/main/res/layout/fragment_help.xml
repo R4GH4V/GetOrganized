@@ -17,7 +17,7 @@
 
     <TextView
         android:text="@string/helpcontent"
-        android:textSize="12sp"
+        android:textSize="15sp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -41,28 +41,28 @@
 
     <TextView
         android:text="@string/helpcloset1"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:text="@string/helpcloset2"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:text="@string/helpcloset3"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:text="@string/helpcloset4"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -99,21 +99,21 @@
 
     <TextView
         android:text="@string/helpmenu1"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:text="@string/helpmenu2"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:text="@string/helpmenu3"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
