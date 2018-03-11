@@ -1,44 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_gallery"
-        android:onClick="galleryClicked"
-        android:text="gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_camera"
-        android:onClick="cameraClicked"
-        android:text="camera"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
+        <TextView
+            android:text="@string/kind"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
 
-    <Spinner
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner2"
-        tools:ignore="UnknownId" />
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@string/category"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:ignore="UnknownId" />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryLightest" />
+
 
     <GridView
         android:id="@+id/gridview"
-        android:columnWidth="100dp"
+        android:columnWidth="130dp"
         android:numColumns="auto_fit"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></GridView>
+        android:layout_height="wrap_content" />
 </LinearLayout>

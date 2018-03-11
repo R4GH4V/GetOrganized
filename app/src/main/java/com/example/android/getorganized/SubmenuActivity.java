@@ -17,6 +17,7 @@ public class SubmenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submenu);
 
+
         Intent intent = getIntent();
         int position = intent.getIntExtra("position", 0);
 
@@ -44,6 +45,23 @@ public class SubmenuActivity extends AppCompatActivity {
             ft.replace(R.id.submenu_container, new FeedbackFragment());
             ft.commit();
         }
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        this.getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        toolbar.setNavigationOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(SubmenuActivity.this, MenuActivity.class);
+                        startActivity(i);
+                    }
+                }
+        );
 
     }
 

@@ -78,8 +78,10 @@ public class ShowItemFragment extends Fragment {
         ok_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(getActivity(), NavdrawerActivity.class);
-                startActivity(intent1);
+                //Intent intent1 = new Intent(getActivity(), NavdrawerActivity.class);
+                //startActivity(intent1);
+                getActivity().onBackPressed();
+                // not using startActivity, so that the ClosetFragment will remember the chosen kind/category
             }
         });
 

@@ -38,15 +38,12 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
 
     private static final String DEBUG_TAG = "EditItemFragment";
 
-    private TextView mDisplayDate;
-    private DatePickerDialog.OnDateSetListener mDateSetListener;
-
     private DatabaseHandler db;
     private ImageView image_iv;
     private EditText price_et;
     private Spinner kind_sp, category_sp, season_sp;
     private Button save_btn, delete_btn;
-    private String worn;
+
 
 
     @Override
@@ -64,11 +61,11 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        image_iv = (ImageView)getActivity().findViewById(R.id.iv_showimg);
-        kind_sp = (Spinner) getActivity().findViewById(R.id.sp_editkind);
-        category_sp = (Spinner) getActivity().findViewById(R.id.sp_editcategory);
-        price_et = (EditText) getActivity().findViewById(R.id.et_editprice);
-        season_sp = (Spinner) getActivity().findViewById(R.id.sp_editseason);
+        image_iv = getActivity().findViewById(R.id.iv_showimg);
+        kind_sp =  getActivity().findViewById(R.id.sp_editkind);
+        category_sp = getActivity().findViewById(R.id.sp_editcategory);
+        price_et = getActivity().findViewById(R.id.et_editprice);
+        season_sp = getActivity().findViewById(R.id.sp_editseason);
 
         // adapter for season spinner
         ArrayAdapter adapter_se = ArrayAdapter.createFromResource(getActivity(), R.array.Season, android.R.layout.simple_spinner_item);
@@ -80,33 +77,6 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kind_sp.setAdapter(adapter1);
         kind_sp.setOnItemSelectedListener(this);
-
-        //Code for DatePicker:
-        mDisplayDate=getActivity().findViewById(R.id.dp_editweardate);
-        mDisplayDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Calendar cal = Calendar.getInstance();
-                int year = cal.get(Calendar.YEAR);
-                int month = cal.get(Calendar.MONTH);
-                int day = cal.get(Calendar.DAY_OF_MONTH);
-
-                DatePickerDialog dialog= new DatePickerDialog(getActivity(),
-                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,mDateSetListener,year,month,day);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-            }
-        });
-
-        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                month = month+1;
-                worn= month + "/" + day + "/" + year;
-                mDisplayDate.setText(worn);
-            }
-        };
-
 
     }
 
@@ -177,7 +147,7 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
 
         // for "SAVE" button, update the database, then go back to ClosetFragment
 
-        save_btn = (Button)getActivity().findViewById(R.id.btn_editsave);
+        save_btn = getActivity().findViewById(R.id.btn_editsave);
         save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -203,7 +173,7 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
 
 
         // for "DELETE" button, show AlertDialog, yes -> delete in the database, then go back to ClosetFragment
-        delete_btn = (Button)getActivity().findViewById(R.id.btn_editdelete);
+        delete_btn = getActivity().findViewById(R.id.btn_editdelete);
         delete_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

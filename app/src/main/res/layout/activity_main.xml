@@ -23,8 +23,8 @@
 
         <TextView
             android:text="@string/email"
-            android:fontFamily="monospace"
             android:textStyle="bold"
+            android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -36,8 +36,7 @@
             android:textSize="10sp" />
 
         <TextView
-            android:text="Gender: "
-            android:fontFamily="monospace"
+            android:text="@string/gender"
             android:textStyle="bold"
             android:layout_gravity="left"
             android:layout_marginLeft="5dp"
@@ -51,26 +50,21 @@
             android:orientation="horizontal" >
 
             <RadioButton
-                android:text="Male"
-                android:fontFamily="monospace"
+                android:text="@string/male"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="maleClick" />
+                android:layout_height="wrap_content" />
 
             <RadioButton
-                android:text="Female"
-                android:fontFamily="monospace"
+                android:text="@string/female"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="femaleClick"/>
+                android:layout_height="wrap_content"/>
 
         </RadioGroup>
 
         <TextView
-            android:text="Language: "
-            android:fontFamily="monospace"
+            android:text="@string/language"
             android:textStyle="bold"
             android:layout_gravity="left"
             android:layout_marginLeft="5dp"
@@ -86,15 +80,13 @@
 
             <RadioButton
                 android:text="English"
-                android:fontFamily="monospace"
                 android:textSize="10sp"
                 android:id="@+id/eng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <RadioButton
-                android:text="Simplified Chinese"
-                android:fontFamily="monospace"
+                android:text="简体中文"
                 android:textSize="10sp"
                 android:id="@+id/chi"
                 android:layout_width="wrap_content"
@@ -103,7 +95,7 @@
         </RadioGroup>
 
         <TextView
-            android:text="This information will help \nus better serve your needs. \nYou can change it anytime \nin Menu - Settings"
+            android:text="@string/startintro"
             android:fontFamily="casual"
             android:textSize="10sp"
             android:gravity="left"
@@ -114,11 +106,10 @@
 
         <Button
             android:id="@+id/getStarted"
-            android:text="Get Started"
+            android:text="@string/getstarted"
             android:textSize="20sp"
-            android:fontFamily="monospace"
             android:textStyle="bold"
-            android:background="#f5deb3"
+            style="@style/NiceButton"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginTop="10dp"
