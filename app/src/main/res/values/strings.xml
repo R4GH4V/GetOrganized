@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GetOrganized</string>
 
-    <string name="title_activity_navdrawer">Get Organized!</string>
+    <string name="title_activity_navdrawer">Get Organized</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
@@ -28,7 +28,6 @@
     <string name="price">Price:</string>
     <string name="worn">Wear Date:</string>
     <string name="season">Season:</string>
-    <string name="rate">Rate item:</string>
     <string name="note">Notes:</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
@@ -53,8 +52,8 @@
     <string name="feedbackemail">Would you like to tell us your feedback?</string>
     <string name="gender">Gender</string>
     <string name="language">Language</string>
-    <string name="startintro">This information will help \nus better serve your needs. \nYou can change it anytime \nin Menu - Settings</string>
-    <string name="startintroland">This information will help us better serve your needs. \nYou can change it anytime in Menu - Settings</string>
+    <string name="startintro">This information will help \nus better serve your needs. \nYou can change it anytime \nin Menu - Settings.</string>
+    <string name="startintroland">This information will help us better serve your needs. \nYou can change it anytime in Menu - Settings.</string>
     <string name="getstarted">Get Started</string>
     <string name="helpcloset1">1) In the CLOSET page, select kind and categoy to see your added clothes;</string>
     <string name="helpcloset2">2) To add an item to the closet, click the camera/gallery button on the top right corner to take a picture or upload an image of your clothes;</string>
