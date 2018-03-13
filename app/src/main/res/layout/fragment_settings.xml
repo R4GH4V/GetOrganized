@@ -45,12 +45,14 @@
 
         <RadioButton
             android:text="@string/male"
+            android:id="@+id/male_r"
             android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="maleClick" />
 
         <RadioButton
+            android:id="@+id/female_r"
             android:text="@string/female"
             android:textSize="20sp"
             android:layout_width="wrap_content"

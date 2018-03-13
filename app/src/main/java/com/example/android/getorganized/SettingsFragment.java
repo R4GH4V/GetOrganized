@@ -19,8 +19,9 @@ import java.util.Locale;
 public class SettingsFragment extends Fragment {
     @Nullable
 
-
+    private MainActivity ob;
     private RadioButton eng,chi;
+    private RadioButton male,female;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActivity().setTitle(R.string.settings);
@@ -33,6 +34,8 @@ public class SettingsFragment extends Fragment {
 
         eng=getActivity().findViewById(R.id.eng);
         chi=getActivity().findViewById(R.id.chi);
+        male=getActivity().findViewById(R.id.male_r);
+        female=getActivity().findViewById(R.id.female_r);
 
         eng.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +50,25 @@ public class SettingsFragment extends Fragment {
                 setLocale("zh");
             }
         });
+
+        male.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ob.setGender("Male");
+            }
+        });
+
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ob.setGender("Female");
+            }
+        });
     }
+
+
+
+
     public void setLocale(String lang)
     {
         Locale locale= new Locale(lang);

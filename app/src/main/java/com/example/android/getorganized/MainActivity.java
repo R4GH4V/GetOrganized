@@ -202,5 +202,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         conf.locale = locale;
         res.updateConfiguration(conf, dm);
     }
+
+    public void setGender(String g)
+    {
+        this.gender=g;
+    }
+    public String getGender()
+    {
+        return gender;
+    }
 }
 

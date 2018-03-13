@@ -8,11 +8,7 @@
         android:id="@+id/shopImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/image_border"
          />
 
-    <TextView
-        android:id="@+id/shopHeading"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"/>
 </LinearLayout>

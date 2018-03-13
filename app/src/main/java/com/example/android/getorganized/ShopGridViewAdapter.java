@@ -1,25 +1,19 @@
 package com.example.android.getorganized;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 
 
 public class ShopGridViewAdapter extends BaseAdapter {
 
     //Add the images here, in the same order you give the Label and pageURL.
-    private Integer[] shopImages = {
+    public Integer[] shopImages={
             R.raw.blazers1,
             R.raw.blazers2,
             R.raw.blazers3,
@@ -41,12 +35,12 @@ public class ShopGridViewAdapter extends BaseAdapter {
     };
 
     private Context context;
-    private String[] imageLabels;
 
-    private ShopGridViewAdapter(Context con, String[] labs) {
+
+    public ShopGridViewAdapter(Context con) {
         this.context=con;
-        this.imageLabels = labs;
     }
+
 
 
 
@@ -76,10 +70,9 @@ public class ShopGridViewAdapter extends BaseAdapter {
             v=convertView;
         }
 
-        TextView textHeading = v.findViewById(R.id.shopHeading);
+
         ImageView thumbnailImage = v.findViewById(R.id.shopImage);
         thumbnailImage.setLayoutParams(new LinearLayout.LayoutParams(600, 600));
-        textHeading.setText(imageLabels[position]);
         thumbnailImage.setImageResource(shopImages[position]);
         return v;
     }

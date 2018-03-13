@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +17,7 @@ public class StatisticsFragment extends Fragment {
     private DatabaseHandler db;
     private TextView item_count, top_count, bottom_count, footwear_count, access_count;
     private TextView item_value, top_value, bottom_value, footwear_value, access_value;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,6 +58,7 @@ public class StatisticsFragment extends Fragment {
 
         top_count = (TextView) getActivity().findViewById(R.id.tv_topcount);
         top_count.setText(Integer.toString(db.getCount("Top")));
+
 
         bottom_count = (TextView) getActivity().findViewById(R.id.tv_bottomcount);
         bottom_count.setText(Integer.toString(db.getCount("Bottom")));

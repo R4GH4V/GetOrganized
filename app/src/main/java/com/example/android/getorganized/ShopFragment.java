@@ -1,6 +1,7 @@
 package com.example.android.getorganized;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,9 +15,8 @@ import android.widget.GridView;
 
 public class ShopFragment extends Fragment {
     @Nullable
-
-    String[] labels;
     String[] pages;
+
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActivity().setTitle(R.string.shop);
@@ -31,18 +31,17 @@ public class ShopFragment extends Fragment {
 
     }
 
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //Getting the resources from values->shop_arrays and putting them in String arrays.
         Resources res= getResources();
-        labels=res.getStringArray(R.array.headings);
         pages=res.getStringArray(R.array.pages);
 
-
-
+        
         GridView grid= getView().findViewById(R.id.shopGrid);
-        ShopGridViewAdapter myAdapter = new ShopGridViewAdapter(getActivity(), labels);
+        ShopGridViewAdapter myAdapter = new ShopGridViewAdapter(getActivity());
         grid.setAdapter(myAdapter);
 
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -54,5 +53,7 @@ public class ShopFragment extends Fragment {
                 startActivity( webPageIntent );
             }
         });
+
+
     }
 }
