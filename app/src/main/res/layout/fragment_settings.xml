@@ -12,14 +12,15 @@
         android:text="@string/email"
         android:textStyle="bold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/et_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="This will be your username in the forum"
-        android:textSize="10sp" />
+        android:textSize="20sp" />
 
     <View
         android:layout_marginTop="20dp"
@@ -29,12 +30,13 @@
         android:background="@color/colorPrimaryLightest" />
 
     <TextView
-        android:text="Gender: "
+        android:text="@string/gender"
         android:textStyle="bold"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:layout_marginTop="0dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -43,14 +45,14 @@
 
         <RadioButton
             android:text="@string/male"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="maleClick" />
 
         <RadioButton
             android:text="@string/female"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="femaleClick"/>
@@ -65,12 +67,13 @@
         android:background="@color/colorPrimaryLightest" />
 
     <TextView
-        android:text="Language: "
+        android:text="@string/language"
         android:textStyle="bold"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -79,15 +82,15 @@
         android:id="@+id/group"        >
 
         <RadioButton
-            android:text="English"
-            android:textSize="10sp"
+            android:text="@string/english"
+            android:textSize="20sp"
             android:id="@+id/eng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
             android:text="简体中文"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:id="@+id/chi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

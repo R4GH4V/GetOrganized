@@ -42,7 +42,7 @@
     <string name="accessories">Accessories</string>
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="edit">Edit</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
@@ -50,8 +50,8 @@
     <string name="no">No</string>
     <string name="feedbackplaystore">Would you like to rate us in the playstore?</string>
     <string name="feedbackemail">Would you like to tell us your feedback?</string>
-    <string name="gender">Gender</string>
-    <string name="language">Language</string>
+    <string name="gender">Gender:</string>
+    <string name="language">Language:</string>
     <string name="startintro">This information will help \nus better serve your needs. \nYou can change it anytime \nin Menu - Settings.</string>
     <string name="startintroland">This information will help us better serve your needs. \nYou can change it anytime in Menu - Settings.</string>
     <string name="getstarted">Get Started</string>
@@ -63,6 +63,8 @@
     <string name="helpmenu1">1) Statistics: analyze the closet for you. Get to know the total number and values of your items in each kind and category.</string>
     <string name="helpmenu2">2) Settings: change your email, gender and language.</string>
     <string name="helpmenu3">3) Feedback: give us your feedback about this app. Thanking you for downloading it again!</string>
+    <string name="english">English</string>
+
 
     <string-array name="Kind">
         <item>All</item>
