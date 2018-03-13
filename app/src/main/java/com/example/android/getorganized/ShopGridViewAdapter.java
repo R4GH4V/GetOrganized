@@ -1,6 +1,8 @@
 package com.example.android.getorganized;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 
 public class ShopGridViewAdapter extends BaseAdapter {
@@ -38,7 +43,7 @@ public class ShopGridViewAdapter extends BaseAdapter {
     private Context context;
     private String[] imageLabels;
 
-    public ShopGridViewAdapter(Context con, String[] labs) {
+    private ShopGridViewAdapter(Context con, String[] labs) {
         this.context=con;
         this.imageLabels = labs;
     }
