@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">整理</string>
+    <string name="app_name">衣橱整理</string>
+
+    <string name="title_activity_navdrawer">衣橱整理</string>
     <string name="email">电子邮件</string>
     <string name="closet">衣橱</string>
     <string name="calendar">日历</string>
@@ -15,7 +17,7 @@
     <string name="totalvalue">总价值</string>
     <string name="mostwornitem">最常使用物品</string>
     <string name="howtousethisapp">应用使用指南</string>
-    <string name="helpcontent">感谢你使用这款应用！它会帮助你更好地整理衣橱。 \n\n</string>
+    <string name="helpcontent">感谢你使用这款衣橱整理应用！ \n\n</string>
     <string name="rating">您的评分将出现在这里。</string>
     <string name="submit">提交</string>
     <string name="yourrating">您的评分是：</string>
@@ -23,18 +25,43 @@
     <string name="category">类别:</string>
     <string name="email_feedback">给予反馈</string>
     <string name="price">价格:</string>
-    <string name="worn">佩戴日期:</string>
-    <string name="season">赛季:</string>
-    <string name="rate">费率项:</string>
+    <string name="worn">使用日期:</string>
+    <string name="season">季节:</string>
     <string name="note">备注:</string>
     <string name="save">保存</string>
     <string name="cancel">取消</string>
     <string name="selectdate">选择日期</string>
-    <string name="hint">出5</string>
+    <string name="hint">满分5分</string>
     <string name="delete">删除</string>
     <string name="add">添加</string>
+    <string name="allitems">全部物品</string>
+    <string name="top">上装</string>
+    <string name="bottom">下装</string>
+    <string name="footwear">鞋类</string>
+    <string name="accessories">配饰</string>
     <string name="camera">相机</string>
-    <string name="gallery">画廊</string>
+    <string name="gallery">相册</string>
+    <string name="ok">好</string>
+    <string name="edit">编辑</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="yes">好</string>
+    <string name="no">不</string>
+    <string name="feedbackplaystore">您愿意在应用商店给我们打分吗？</string>
+    <string name="feedbackemail">您愿意告诉我们您的反馈意见吗？</string>
+    <string name="gender">性别</string>
+    <string name="language">语言</string>
+    <string name="startintro">这些信息将会帮助 \n我们更好地为您服务。 \n您可以随时在 \n菜单-设置 里更改。</string>
+    <string name="startintroland">这些信息将会帮助我们更好地为您服务。 \n您可以随时在菜单-设置 里更改。</string>
+    <string name="getstarted">开始</string>
+    <string name="helpcloset1">1) 在 衣橱 页面，选择大类和类别，可以看到您已添加的衣物；</string>
+    <string name="helpcloset2">2) 添加衣物到衣橱：点击右上角的相机/相册，拍摄或上传您衣物的照片；</string>
+    <string name="helpcloset3">3) 上传照片之后，填写衣物详细信息（包括衣物的大类、类别、价格和季节），然后点击 添加 按钮；</string>
+    <string name="helpcloset4">4) 现在上传后的照片显示在了衣橱里。随时点击照片查看衣物详细信息；</string>
+    <string name="helpcloset5">5) 在详细信息页面，点击 编辑 按钮来编辑。</string>
+    <string name="helpmenu1">1) 统计：为您分析您的衣橱，了解每个大类和类别的总数量和总价值。</string>
+    <string name="helpmenu2">2) 设置：修改您的电子邮箱、性别和语言设置。</string>
+    <string name="helpmenu3">3) 反馈：告诉我们您对这款应用的评价。再次感谢您下载它！</string>
 
 
     <string-array name="Kind">
@@ -85,7 +112,5 @@
         <item>墨镜</item>
         <item>手表</item>
     </string-array>
-
-
 
 </resources>
