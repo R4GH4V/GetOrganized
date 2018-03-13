@@ -53,13 +53,15 @@
                 android:text="@string/male"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="maleClick"/>
 
             <RadioButton
                 android:text="@string/female"
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="femaleClick"/>
 
         </RadioGroup>
 

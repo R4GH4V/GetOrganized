@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.getorganized">
-    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -16,12 +15,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".NavdrawerActivity"
             android:label="@string/title_activity_navdrawer"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MenuActivity"
             android:label="@string/menu"
@@ -30,9 +28,10 @@
             android:name=".SubmenuActivity"
             android:label="Menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ItemActivity"/>
+        <activity android:name=".ItemActivity" />
+        <activity android:name=".viewdate" />
+        <activity android:name=".add_cloth_calendar"></activity>
 
-        <activity android:name=".ShopDisplayActivity"/>
 
     </application>
 
