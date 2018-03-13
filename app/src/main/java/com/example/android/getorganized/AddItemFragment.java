@@ -44,13 +44,12 @@ public class AddItemFragment extends Fragment implements AdapterView.OnItemSelec
 
     private static final String DEBUG_TAG = "AddItemFragment";
 
-
     private DatabaseHandler db;
     private byte[] image;
     private Spinner kind_sp, category_sp, season_sp;
     private EditText price_et;
     private Button add_btn;
-    private String kind, category, season;
+    private String kind, category, season,worn;
     private Integer price;
 
     @Override
@@ -118,7 +117,7 @@ public class AddItemFragment extends Fragment implements AdapterView.OnItemSelec
         Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
         image = profileImage(bmp);
 
-        add_btn = getActivity().findViewById(R.id.btn_add);
+        add_btn = (Button)getActivity().findViewById(R.id.btn_add);
         add_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 addItem();

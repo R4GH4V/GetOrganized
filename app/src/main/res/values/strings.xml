@@ -63,7 +63,7 @@
     <string name="helpmenu1">1) Statistics: analyze the closet for you. Get to know the total number and values of your items in each kind and category.</string>
     <string name="helpmenu2">2) Settings: change your email, gender and language.</string>
     <string name="helpmenu3">3) Feedback: give us your feedback about this app. Thanking you for downloading it again!</string>
-
+    <string name="english">English</string>
     <string-array name="Kind">
         <item>All</item>
         <item>Top</item>

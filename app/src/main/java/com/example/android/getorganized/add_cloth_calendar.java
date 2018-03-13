@@ -51,7 +51,6 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
         spinner11.setAdapter(adapter1);
         spinner11.setOnItemSelectedListener(this);
         db = new DatabaseHandler(this);
-        showRecords("All","");
     }
 
     @Override
@@ -74,11 +73,12 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
         });
     }
 
+    @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
         switch (adapterView.getId()) {
 
-            case R.id.spinner1:
+            case R.id.spinner11:
 
                 String sp1 = String.valueOf(spinner11.getSelectedItem());
                 showRecords(sp1, "All");
@@ -198,7 +198,6 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
                 dialogbox.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                     }
                 });
                 AlertDialog alertDialog= dialogbox.create();
@@ -209,7 +208,6 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
 }
 
     //Retrieve data from the database and set to the list view
-
 
 
 
