@@ -66,11 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setContentView(R.layout.activity_main);
             findviewByid();
             setonclicklistener();
-
-            int i= db.checking();
-
-            Log.e("FUcking shit",String.valueOf(i));
-
+            
             final Handler handler= new Handler();
             Timer timer = new Timer();
             int i1=0;
