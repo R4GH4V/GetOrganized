@@ -31,11 +31,11 @@ public class FeedbackFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        final RatingBar ratingRatingBar = (RatingBar) getView().findViewById(R.id.rating_rating_bar);
-        Button submitButton = (Button) getView().findViewById(R.id.submit_button);
-        final TextView feedback_tv = (TextView) getView().findViewById(R.id.tv_feedback);
-        final Button yes_btn = (Button) getView().findViewById(R.id.btn_yes);
-        final Button no_btn = (Button) getView().findViewById(R.id.btn_no);
+        final RatingBar ratingRatingBar =  getView().findViewById(R.id.rating_rating_bar);
+        Button submitButton =  getView().findViewById(R.id.submit_button);
+        final TextView feedback_tv = getView().findViewById(R.id.tv_feedback);
+        final Button yes_btn =  getView().findViewById(R.id.btn_yes);
+        final Button no_btn =  getView().findViewById(R.id.btn_no);
         //final Integer score = Math.round(ratingRatingBar.getRating());
         //Log.d(DEBUG_TAG, "score: " + score);
 
@@ -54,6 +54,12 @@ public class FeedbackFragment extends Fragment {
                         }
                     });
                     no_btn.setVisibility(View.VISIBLE);
+                    no_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getActivity(),"No, maybe later.", Toast.LENGTH_LONG).show();
+                        }
+                    });
 
                 } else {
                     feedback_tv.setText(R.string.feedbackemail);
@@ -72,6 +78,13 @@ public class FeedbackFragment extends Fragment {
                             startActivity(chooser);
                         }
                     });
+                    no_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getActivity(), "No, maybe later.", Toast.LENGTH_LONG).show();
+                        }
+                    });
+
                 }
             }
         });
