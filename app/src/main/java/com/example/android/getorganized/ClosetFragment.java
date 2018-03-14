@@ -10,6 +10,7 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -32,6 +33,8 @@ import static android.app.Activity.RESULT_OK;
 
 public class ClosetFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    private static final String DEBUG_TAG = "ClosetFragment";
+
     private DatabaseHandler db;
     private GridView gridView;
     private GridViewAdapter gridAdapter;
@@ -42,6 +45,8 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        Log.d(DEBUG_TAG, "onCreateView");
 
         // change the title in the toolbar
         getActivity().setTitle(R.string.closet);
@@ -77,6 +82,8 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         // super.onActivityCreated(savedInstanceState);
 
+        Log.d(DEBUG_TAG, "onViewCreated");
+
         spinner1 = getView().findViewById(R.id.spinner1);
         spinner2 = getView().findViewById(R.id.spinner2);
         ArrayAdapter adapter1 = ArrayAdapter.createFromResource(getActivity(), R.array.Kind, android.R.layout.simple_spinner_item);
@@ -95,6 +102,8 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public void onStart() {
         super.onStart();
+
+        Log.d(DEBUG_TAG, "onStart");
 
         // for category spinner
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

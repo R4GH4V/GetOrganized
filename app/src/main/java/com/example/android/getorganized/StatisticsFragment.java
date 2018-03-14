@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +17,22 @@ import android.widget.TextView;
 
 public class StatisticsFragment extends Fragment {
 
+    private static final String DEBUG_TAG = "StatisticsFragment";
+
     private DatabaseHandler db;
     private TextView item_count, top_count, bottom_count, footwear_count, access_count;
     private TextView item_value, top_value, bottom_value, footwear_value, access_value;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActivity().setTitle(R.string.statistics);
+        Log.d(DEBUG_TAG, "onCreateView");
         return inflater.inflate(R.layout.fragment_statistics,null);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        Log.d(DEBUG_TAG, "onViewCreated");
         db = new DatabaseHandler(getActivity());
 
         /*
@@ -52,13 +58,13 @@ public class StatisticsFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        Log.d(DEBUG_TAG, "onStart");
 
         item_count = (TextView) getActivity().findViewById(R.id.tv_itemcount);
         item_count.setText(Integer.toString(db.getCount("All")));
 
         top_count = (TextView) getActivity().findViewById(R.id.tv_topcount);
         top_count.setText(Integer.toString(db.getCount("Top")));
-
 
         bottom_count = (TextView) getActivity().findViewById(R.id.tv_bottomcount);
         bottom_count.setText(Integer.toString(db.getCount("Bottom")));

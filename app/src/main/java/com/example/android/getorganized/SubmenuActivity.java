@@ -8,18 +8,26 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 public class SubmenuActivity extends AppCompatActivity {
 
+    final static String DEBUG_TAG = "SubmenuActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_submenu);
 
+
+        Log.d(DEBUG_TAG, "onCreate");
+
+        setContentView(R.layout.activity_submenu);
+        Log.d(DEBUG_TAG, "setContentView");
 
         Intent intent = getIntent();
         int position = intent.getIntExtra("position", 0);
+        Log.d(DEBUG_TAG, "position" + position);
 
         if(position==0) {
             FragmentManager fragmentManager=getSupportFragmentManager();
@@ -46,7 +54,6 @@ public class SubmenuActivity extends AppCompatActivity {
             ft.commit();
         }
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -62,6 +69,11 @@ public class SubmenuActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
+
+
+
 
     }
 

@@ -12,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 // any activity that extends NavDrawerBaseActivity will have the navigation drawer
@@ -19,10 +20,22 @@ import android.view.MenuItem;
 public class NavDrawerBaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String DEBUG_TAG = "NavDrawerBaseActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(DEBUG_TAG, "savedInstanceState != null: " + String.valueOf(savedInstanceState != null));
+        if (savedInstanceState != null) {
+            for (String key: savedInstanceState.keySet()) {
+                Log.d(DEBUG_TAG, key);
+            }
+        }
+        //super.onCreate(null);
         super.onCreate(savedInstanceState);
+        Log.d(DEBUG_TAG, "onCreate");
+
         setContentView(R.layout.activity_navdrawer);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

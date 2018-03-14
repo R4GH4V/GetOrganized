@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,8 @@ import java.util.HashMap;
 
 public class MenuFragment extends ListFragment {
 
+    private final static String DEBUG_TAG = "MenuFragment";
+
     int[] icons = new int[]{
             R.drawable.ic_statistics,
             R.drawable.ic_settings,
@@ -31,12 +34,14 @@ public class MenuFragment extends ListFragment {
  
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d(DEBUG_TAG, "onCreateView");
         return super.onCreateView(inflater, container, savedInstanceState);
         //return inflater.inflate(R.layout.fragment_menu, null);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        Log.d(DEBUG_TAG, "onViewCreated");
         String[] menu_array = getResources().getStringArray(R.array.menu_array);
         HashMap<String, String> map;
         for (int i = 0; i < menu_array.length; i ++) {
@@ -59,6 +64,7 @@ public class MenuFragment extends ListFragment {
     @Override
     public void onStart() {
         super.onStart();
+        Log.d(DEBUG_TAG, "onStart");
 
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -66,6 +72,7 @@ public class MenuFragment extends ListFragment {
 
                 Intent intent = new Intent(getActivity().getBaseContext(), SubmenuActivity.class);
                 intent.putExtra("position", position);
+                Log.d(DEBUG_TAG, "position" + position);
                 startActivity(intent);
 
 //                if(position == 0) {
