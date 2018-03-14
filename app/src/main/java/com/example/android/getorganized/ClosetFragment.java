@@ -110,7 +110,7 @@ public class ClosetFragment extends Fragment implements AdapterView.OnItemSelect
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String sp2 = String.valueOf(spinner2.getSelectedItem());
-                if(!sp2.equals("All")) {
+                if(!sp2.equals("All") && !sp2.equals("全部")) {
                     showRecords("", sp2);
                 }
             }

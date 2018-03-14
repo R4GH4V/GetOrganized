@@ -68,9 +68,25 @@
     <string name="helpmenu2">2) 设置：修改您的电子邮箱、性别和语言设置。</string>
     <string name="helpmenu3">3) 反馈：告诉我们您对这款应用的评价。再次感谢您下载它！</string>
     <string name="emailhint">这将是您的论坛用户名</string>
+    <string name="doyouwanttoaddthisitemforthisdate">你想要在这天添加衣物吗？</string>
+    <string name="imagealreadyselectedforthisdate">已为这天选择了图片</string>
+    <string name="savedsuccessfully">成功保存</string>
+    <string name="notsaved">未保存!!!</string>
+    <string name="deleteitem">删除物品</string>
+    <string name="areyousureyouwanttodeletethisitem">确定要删除这个物品吗？</string>
+    <string name="thankyou">感谢您！</string>
+    <string name="nomaybelater">以后再说。</string>
 
     <string-array name="Kind">
         <item>全部</item>
+        <item>上装</item>
+        <item>下装</item>
+        <item>鞋类</item>
+        <item>配饰</item>
+    </string-array>
+
+    <!-- remove "all" for AddItem and EditItem -->
+    <string-array name="Kind_no_all">
         <item>上装</item>
         <item>下装</item>
         <item>鞋类</item>
@@ -88,6 +104,16 @@
         <item>T恤</item>
     </string-array>
 
+    <string-array name="Top_no_all">
+        <item>西装</item>
+        <item>大衣和夹克</item>
+        <item>连衣裙</item>
+        <item>衬衫</item>
+        <item>毛衣</item>
+        <item>运动衫</item>
+        <item>T恤</item>
+    </string-array>
+
     <string-array name="Bottom">
         <item>全部</item>
         <item>牛仔裤</item>
@@ -96,8 +122,23 @@
         <item>长裤</item>
     </string-array>
 
+    <string-array name="Bottom_no_all">
+        <item>牛仔裤</item>
+        <item>短裤</item>
+        <item>半身裙</item>
+        <item>长裤</item>
+    </string-array>
+
     <string-array name="Footwear">
         <item>全部</item>
+        <item>运动鞋</item>
+        <item>靴子</item>
+        <item>平底鞋</item>
+        <item>高跟鞋</item>
+        <item>凉鞋</item>
+    </string-array>
+
+    <string-array name="Footwear_no_all">
         <item>运动鞋</item>
         <item>靴子</item>
         <item>平底鞋</item>
@@ -117,5 +158,41 @@
         <item>墨镜</item>
         <item>手表</item>
     </string-array>
+
+    <string-array name="Accessories_no_all">
+        <item>包袋</item>
+        <item>腰带</item>
+        <item>手套</item>
+        <item>帽子</item>
+        <item>首饰</item>
+        <item>围巾</item>
+        <item>袜子</item>
+        <item>墨镜</item>
+        <item>手表</item>
+    </string-array>
+
+    <string-array name="Season">
+        <item>春季</item>
+        <item>夏季</item>
+        <item>秋季</item>
+        <item>冬季</item>
+    </string-array>
+
+    <string name="current_date">六月, 2016</string>
+    <string name="add_event">添加日历事件</string>
+    <string name="sun">日</string>
+    <string name="mon">一</string>
+    <string name="tue">二</string>
+    <string name="wed">三</string>
+    <string name="thu">四</string>
+    <string name="fri">五</string>
+    <string name="sat">六</string>
+    <string name="last_date">30</string>
+
+    <string name="set">设定</string>
+    <string name="view">查看</string>
+    <string name="gender_error">请选择性别</string>
+    <string name="email_error">请填写电子邮箱</string>
+    <string name="nodata">这天没有添加数据</string>
 
 </resources>

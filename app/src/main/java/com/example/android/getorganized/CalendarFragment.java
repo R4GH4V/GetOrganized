@@ -57,6 +57,8 @@ public class CalendarFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        getActivity().setTitle(R.string.calendar);
+
         View view = inflater.inflate(R.layout.fragment_calendar,null);
         previousButton = (ImageView)view.findViewById(R.id.previous_month);
         nextButton = (ImageView)view.findViewById(R.id.next_month);

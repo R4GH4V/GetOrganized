@@ -21,63 +21,10 @@ public class ClosetActivity extends NavDrawerBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(DEBUG_TAG, "onCreate");
-//        setContentView(R.layout.activity_navdrawer);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
-//        toggle.syncState();
-//
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction ft=fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.replace(R.id.screen_area, new ClosetFragment());
         ft.commit();
     }
-
-//    @Override
-//    public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
-//    }
-//
-//
-//    @SuppressWarnings("StatementWithEmptyBody")
-//    @Override
-//    public boolean onNavigationItemSelected(MenuItem item) {
-//        // Handle navigation view item clicks here.
-//        Fragment fragment=null;
-//
-//        int id = item.getItemId();
-//
-//        if (id == R.id.closet) {
-//            fragment=new ClosetFragment();
-//        }  else if (id == R.id.calendar) {
-//            fragment=new CalendarFragment();
-//        } else if (id == R.id.shop) {
-//            fragment=new ShopFragment();
-//        } else if (id == R.id.action_bar) {
-//            fragment=new MenuFragment();
-//        }
-//
-//        if(fragment!=null){
-//            FragmentManager fragmentManager=getSupportFragmentManager();
-//            FragmentTransaction ft=fragmentManager.beginTransaction();
-//            ft.replace(R.id.screen_area, fragment);
-//            ft.commit();
-//        }
-//
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
-//        return true;
-//    }
 }

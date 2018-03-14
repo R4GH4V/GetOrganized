@@ -49,7 +49,7 @@ public class FeedbackFragment extends Fragment {
                     yes_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(getActivity(), "Thank you!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), R.string.thankyou, Toast.LENGTH_LONG).show();
                             // TODO: set yes_btn.setOnCluckListern to playstore page
                         }
                     });
@@ -57,7 +57,7 @@ public class FeedbackFragment extends Fragment {
                     no_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(getActivity(),"No, maybe later.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(),R.string.nomaybelater, Toast.LENGTH_LONG).show();
                         }
                     });
 
@@ -81,7 +81,7 @@ public class FeedbackFragment extends Fragment {
                     no_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(getActivity(), "No, maybe later.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), R.string.nomaybelater, Toast.LENGTH_LONG).show();
                         }
                     });
 

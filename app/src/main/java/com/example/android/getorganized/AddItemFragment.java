@@ -146,9 +146,9 @@ public class AddItemFragment extends Fragment implements AdapterView.OnItemSelec
         season = season_sp.getSelectedItem().toString();
 
         if (db.addItem(new Item(image, kind, category, price, season))) {
-            Toast.makeText(getActivity().getApplicationContext(), "Saved successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity().getApplicationContext(), R.string.savedsuccessfully, Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(getActivity().getApplicationContext(), "Not saved!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity().getApplicationContext(), R.string.notsaved, Toast.LENGTH_LONG).show();
         }
 
         Intent intent = new Intent(getActivity(), ClosetActivity.class);

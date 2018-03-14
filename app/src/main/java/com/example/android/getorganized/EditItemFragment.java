@@ -179,8 +179,8 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
             public void onClick(View v) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Delete item")
-                        .setMessage("Are you sure you want to delete this item?")
+                builder.setTitle(R.string.deleteitem)
+                        .setMessage(R.string.areyousureyouwanttodeletethisitem)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 db.deleteItem(item_id);

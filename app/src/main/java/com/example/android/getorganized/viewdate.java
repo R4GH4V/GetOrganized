@@ -58,8 +58,8 @@ public class viewdate extends AppCompatActivity implements View.OnClickListener{
             public void onItemClick(final AdapterView<?> parent, View view, final int position, long id) {
 
                 AlertDialog.Builder dialogbox= new AlertDialog.Builder(new ContextThemeWrapper(viewdate.this,R.style.dailog));
-                dialogbox.setTitle("Delete");
-                dialogbox.setMessage("Do you want to delete this item from this date?");
+                dialogbox.setTitle(R.string.delete);
+                dialogbox.setMessage(R.string.doyouwanttoaddthisitemforthisdate);
                 dialogbox.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

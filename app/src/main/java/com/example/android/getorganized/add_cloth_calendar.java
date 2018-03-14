@@ -38,7 +38,7 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Add");
+        setTitle(R.string.add);
         setContentView(R.layout.activity_add_cloth_calendar);
 
         Bundle bundle = getIntent().getExtras();
@@ -61,7 +61,7 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String sp2 = String.valueOf(spinner22.getSelectedItem());
-                if (!sp2.equals("All")) {
+                if (!sp2.equals("All") && !sp2.equals("全部")) {
                     showRecords("", sp2);
                 }
             }
@@ -177,8 +177,8 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
                                     final int position, long id) {
 
                 final AlertDialog.Builder dialogbox = new AlertDialog.Builder(new ContextThemeWrapper(add_cloth_calendar.this,R.style.dailog));
-                dialogbox.setTitle("Add");
-                dialogbox.setMessage("Do you want to add this item for this date?");
+                dialogbox.setTitle(R.string.add);
+                dialogbox.setMessage(R.string.doyouwanttoaddthisitemforthisdate);
                 dialogbox.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -187,7 +187,7 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
                         Integer id = item.getID();
 
                         boolean check= db.clothmatch(id,date);
-                        if(check==true) Toast.makeText(getBaseContext(),"Image already selected for this date",Toast.LENGTH_LONG).show();
+                        if(check==true) Toast.makeText(getBaseContext(),R.string.imagealreadyselectedforthisdate,Toast.LENGTH_LONG).show();
                         else db.adddatainworn(id, date);
 
                         Intent intent =new Intent();

@@ -35,6 +35,7 @@ public class MenuFragment extends ListFragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.d(DEBUG_TAG, "onCreateView");
+        getActivity().setTitle(R.string.menu);
         return super.onCreateView(inflater, container, savedInstanceState);
         //return inflater.inflate(R.layout.fragment_menu, null);
     }
