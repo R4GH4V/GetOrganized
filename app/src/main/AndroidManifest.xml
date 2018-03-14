@@ -18,8 +18,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NavdrawerActivity"
-            android:label="@string/title_activity_navdrawer"
+            android:name=".ClosetActivity"
+            android:label="@string/closet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/calendar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShopActivity"
+            android:label="@string/shop"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MenuActivity"

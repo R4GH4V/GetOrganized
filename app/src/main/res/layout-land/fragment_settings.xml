@@ -44,6 +44,7 @@
         android:orientation="horizontal" >
 
         <RadioButton
+            android:id="@+id/male_r"
             android:text="@string/male"
             android:textSize="20sp"
             android:layout_width="wrap_content"
@@ -51,6 +52,7 @@
             android:onClick="maleClick" />
 
         <RadioButton
+            android:id="@+id/female_r"
             android:layout_marginLeft="50dp"
             android:text="@string/female"
             android:textSize="20sp"

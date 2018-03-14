@@ -166,7 +166,7 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
                 db.updateItem(updated_item, item_id);
 
                 Log.d(DEBUG_TAG, "kind after updating: " + item.getKind());
-                Intent intent1 = new Intent(getActivity(), NavdrawerActivity.class);
+                Intent intent1 = new Intent(getActivity(), ClosetActivity.class);
                 startActivity(intent1);
             }
         });
@@ -184,7 +184,7 @@ public class EditItemFragment extends Fragment implements AdapterView.OnItemSele
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 db.deleteItem(item_id);
-                                Intent intent2 = new Intent(getActivity(), NavdrawerActivity.class);
+                                Intent intent2 = new Intent(getActivity(), ClosetActivity.class);
                                 startActivity(intent2);
                             }
                         })

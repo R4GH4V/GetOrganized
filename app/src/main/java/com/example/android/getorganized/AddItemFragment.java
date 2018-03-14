@@ -151,7 +151,7 @@ public class AddItemFragment extends Fragment implements AdapterView.OnItemSelec
             Toast.makeText(getActivity().getApplicationContext(), "Not saved!!!", Toast.LENGTH_LONG).show();
         }
 
-        Intent intent = new Intent(getActivity(), NavdrawerActivity.class);
+        Intent intent = new Intent(getActivity(), ClosetActivity.class);
         startActivity(intent);
 
         /*

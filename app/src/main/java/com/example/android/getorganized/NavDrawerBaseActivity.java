@@ -58,23 +58,34 @@ public class NavDrawerBaseActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.closet) {
-            fragment=new ClosetFragment();
+            Log.d(DEBUG_TAG, "id==closet");
+            //fragment=new ClosetFragment();
+            Intent closetIntent = new Intent(this, ClosetActivity.class);
+            startActivity(closetIntent);
+            this.finish();
         }  else if (id == R.id.calendar) {
-            fragment=new CalendarFragment();
+            //fragment=new CalendarFragment();
+            Intent calendarIntent = new Intent(this, CalendarActivity.class);
+            startActivity(calendarIntent);
+            this.finish();
         } else if (id == R.id.shop) {
-            fragment=new ShopFragment();
+            //fragment=new ShopFragment();
+            Intent shopIntent = new Intent(this, ShopActivity.class);
+            startActivity(shopIntent);
+            this.finish();
         } else if (id == R.id.menu) {
+            Log.d(DEBUG_TAG, "id==menu");
             Intent menuIntent = new Intent(this, MenuActivity.class);
             startActivity(menuIntent);
             this.finish();
         }
 
-        if(fragment!=null){
-            FragmentManager fragmentManager=getSupportFragmentManager();
-            FragmentTransaction ft=fragmentManager.beginTransaction();
-            ft.replace(R.id.screen_area, fragment);
-            ft.commit();
-        }
+//        if(fragment!=null){
+//            FragmentManager fragmentManager=getSupportFragmentManager();
+//            FragmentTransaction ft=fragmentManager.beginTransaction();
+//            ft.replace(R.id.screen_area, fragment);
+//            ft.commit();
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -13,7 +13,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class NavdrawerActivity extends NavDrawerBaseActivity {
+public class ClosetActivity extends NavDrawerBaseActivity {
 
     private static final String DEBUG_TAG = "NavdrawerActivity";
 

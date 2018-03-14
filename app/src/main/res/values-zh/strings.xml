@@ -59,10 +59,15 @@
     <string name="helpcloset3">3) 上传照片之后，填写衣物详细信息（包括衣物的大类、类别、价格和季节），然后点击 添加 按钮；</string>
     <string name="helpcloset4">4) 现在上传后的照片显示在了衣橱里。随时点击照片查看衣物详细信息；</string>
     <string name="helpcloset5">5) 在详细信息页面，点击 编辑 按钮来编辑。</string>
+    <string name="helpcalendar1">1) 点击任何一个日期来查看你为这天添加的衣物。</string>
+    <string name="helpcalendar2">2) 点击 添加 按钮为这天添加衣物。</string>
+    <string name="helpcalendar3">3) 如果您为未来某天添加了衣物，到那天您会收到提醒通知。</string>
+    <string name="helpshop1">1) 我们为您量身定制购物推荐，点击您感兴趣的衣物，查看它在亚马逊上的页面购买。</string>
+    <string name="helpshop2">2) 点击右上角的 论坛 按钮，在论坛出售您的物品或购买其他用户的二手衣物。使用用户名作为你们联络的电子邮箱。</string>
     <string name="helpmenu1">1) 统计：为您分析您的衣橱，了解每个大类和类别的总数量和总价值。</string>
     <string name="helpmenu2">2) 设置：修改您的电子邮箱、性别和语言设置。</string>
     <string name="helpmenu3">3) 反馈：告诉我们您对这款应用的评价。再次感谢您下载它！</string>
-
+    <string name="emailhint">这将是您的论坛用户名</string>
 
     <string-array name="Kind">
         <item>全部</item>

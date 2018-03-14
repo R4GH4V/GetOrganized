@@ -11,18 +11,21 @@
     <TextView
         android:text="@string/email"
         android:textStyle="bold"
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/et_email"
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="This will be your username in the forum"
-        android:textSize="20sp" />
+        android:hint="@string/emailhint"
+        android:textSize="15sp" />
 
     <View
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
@@ -33,12 +36,14 @@
         android:text="@string/gender"
         android:textStyle="bold"
         android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="0dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"/>
 
     <RadioGroup
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
@@ -62,6 +67,7 @@
     </RadioGroup>
 
     <View
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
@@ -72,12 +78,14 @@
         android:text="@string/language"
         android:textStyle="bold"
         android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"/>
 
     <RadioGroup
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="101dp"
-        android:numStars="5" />
-        <!--android:stepSize=".5" /> -->
+        android:numStars="5"
+        android:stepSize="1.0" />
 
     <Button
         android:text="@string/submit"

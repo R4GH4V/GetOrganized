@@ -60,10 +60,16 @@
     <string name="helpcloset3">3) After you upload the image, add attributes (including kind, category, price, season), then click  ADD  button;</string>
     <string name="helpcloset4">4) Now the uploaded image shows up in your closet. Click the image anytime to see clothes details;</string>
     <string name="helpcloset5">5) In the item detail page, click  EDIT  button to edit its attributes.</string>
+    <string name="helpcalendar1">1) Click any date to see the clothes you have added for that day.</string>
+    <string name="helpcalendar2">2) Click ADD button to add clothes for the day.</string>
+    <string name="helpcalendar3">3) If you add clothes for future dates, you will receive notification on that day.</string>
+    <string name="helpshop1">1) Our customized shop recommendations for you, click the item you are interested to see its detailed page from Amazon.</string>
+    <string name="helpshop2">2) Click the FORUM button on top right corner, sell your item in the forum, or buy second-hand items from other users. The username is your contact email.</string>
     <string name="helpmenu1">1) Statistics: analyze the closet for you. Get to know the total number and values of your items in each kind and category.</string>
     <string name="helpmenu2">2) Settings: change your email, gender and language.</string>
     <string name="helpmenu3">3) Feedback: give us your feedback about this app. Thanking you for downloading it again!</string>
     <string name="english">English</string>
+    <string name="emailhint">This will be your username in the forum</string>
     <string-array name="Kind">
         <item>All</item>
         <item>Top</item>

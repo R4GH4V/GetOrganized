@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -15,18 +15,26 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
 
-    <fragment
-        android:id="@+id/menu_fragment"
-        class="com.example.android.getorganized.MenuFragment"
-        android:layout_weight="1"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </fragment>
 
-    <FrameLayout
-        android:id="@+id/submenu_container"
-        android:layout_weight="2"
-        android:layout_width="0dp"
-        android:layout_height="match_parent">
-    </FrameLayout>
+        <fragment
+            android:id="@+id/menu_fragment"
+            class="com.example.android.getorganized.MenuFragment"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </fragment>
+
+        <FrameLayout
+            android:id="@+id/submenu_container"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+    </LinearLayout>
+
 </LinearLayout>

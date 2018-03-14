@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boolean check= db.userdata_check();
             if (check == true)
             {
-                Intent in = new Intent(MainActivity.this, NavdrawerActivity.class);
+                Intent in = new Intent(MainActivity.this, ClosetActivity.class);
                 startActivity(in);
             }
             setContentView(R.layout.activity_main);
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     {
                         String mail =email.getText().toString().trim();
                         db.adduserdata(mail,gender);
-                        Intent in = new Intent(MainActivity.this, NavdrawerActivity.class);
+                        Intent in = new Intent(MainActivity.this, ClosetActivity.class);
                         startActivity(in);
                     }
                     else
