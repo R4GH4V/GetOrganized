@@ -22,7 +22,7 @@
 
         <TextView
             android:text="@string/app_name"
-            android:fontFamily="@font/RammettoOne"
+            android:fontFamily="@font/rammettoone"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:textStyle="bold"

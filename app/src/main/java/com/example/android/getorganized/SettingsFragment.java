@@ -19,7 +19,6 @@ import java.util.Locale;
 public class SettingsFragment extends Fragment {
     @Nullable
 
-    private MainActivity ob;
     private RadioButton eng,chi;
     private RadioButton male,female;
 
@@ -54,14 +53,14 @@ public class SettingsFragment extends Fragment {
         male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ob.setGender("Male");
+                MainActivity.setGender("Male");
             }
         });
 
         female.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ob.setGender("Female");
+                MainActivity.setGender("Female");
             }
         });
     }

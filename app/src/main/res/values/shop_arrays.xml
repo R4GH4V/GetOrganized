@@ -21,7 +21,7 @@
     <item>sweaterm3</item>
 </string-array>
 
-    <string-array name="pages">
+    <string-array name="unisex">
         <item>https://tinyurl.com/ydxvkr3p</item>
         <item>https://tinyurl.com/y6v2efh2</item>
         <item>https://tinyurl.com/y8sko35v</item>
@@ -42,6 +42,177 @@
         <item>https://tinyurl.com/y9ef5q5d</item>
 
     </string-array>
+    <string-array name="male_top_zero">
+        <item>https://tinyurl.com/ydxvkr3p</item>
+        <item>https://tinyurl.com/y6v2efh2</item>
+        <item>https://tinyurl.com/y8sko35v</item>
+        <item>https://tinyurl.com/ya72cctf</item>
+        <item>https://tinyurl.com/y9m3wxg5</item>
+        <item>https://tinyurl.com/y8oq2als</item>
+        <item>https://tinyurl.com/ybmj96so</item>
+        <item>https://tinyurl.com/ycg8umyu</item>
+        <item>https://tinyurl.com/y9ef5q5d</item>
+        <item>https://tinyurl.com/ybhhvw74</item>
+        <item>https://tinyurl.com/y9erxvpd</item>
+        <item>https://tinyurl.com/y8nszmaa</item>
+        <item>https://tinyurl.com/y9dwufg4</item>
+        <item>https://tinyurl.com/y96cqslh</item>
+        <item>https://tinyurl.com/y9htztgy</item>
+        <item>https://tinyurl.com/y7uymnbp </item>
+        <item>https://tinyurl.com/y8mxop8x</item>
+        <item>https://tinyurl.com/y777btrv</item>
+    </string-array>
+
+
+    <string-array name="male_bottom_zero">
+        <item>https://tinyurl.com/y8vz68b5</item>
+        <item>https://tinyurl.com/y89xjdgm</item>
+        <item>https://tinyurl.com/y9wr24fu</item>
+        <item>https://tinyurl.com/y75ydhgs</item>
+        <item>https://tinyurl.com/yb5f22xk</item>
+        <item>https://tinyurl.com/y8rr9gyv</item>
+        <item>https://tinyurl.com/y7wboyxc</item>
+        <item>https://tinyurl.com/yagrs75q </item>
+        <item>https://tinyurl.com/yde2s72l</item>
+        <item>https://tinyurl.com/ybbkw94w</item>
+        <item>https://tinyurl.com/y8cw3rkh</item>
+        <item>https://tinyurl.com/ycylgarx</item>
+        <item>https://tinyurl.com/yc3aacbt</item>
+        <item>https://tinyurl.com/y8uxxzm9</item>
+        <item>https://tinyurl.com/y7rvghxl</item>
+        <item>https://tinyurl.com/y9ymhetr</item>
+        <item>https://tinyurl.com/ycyh2eds</item>
+        <item>https://tinyurl.com/y8tetdl5</item>
+    </string-array>
+
+    <string-array name="male_foot_zero">
+        <item>https://tinyurl.com/y7uymnbp</item>
+        <item>https://tinyurl.com/y8mxop8x</item>
+        <item>https://tinyurl.com/y777btrv</item>
+        <item>https://tinyurl.com/y9ymhetr</item>
+        <item>https://tinyurl.com/ycyh2eds</item>
+        <item>https://tinyurl.com/y8tetdl5</item>
+        <item>https://tinyurl.com/ybmj96so</item>
+        <item>https://tinyurl.com/ycg8umyu</item>
+        <item>https://tinyurl.com/y9ef5q5d</item>
+        <item>https://tinyurl.com/y9dwufg4</item>
+        <item>https://tinyurl.com/y96cqslh</item>
+        <item>https://tinyurl.com/y9htztgy</item>
+        <item>https://tinyurl.com/y8vz68b5</item>
+        <item>https://tinyurl.com/y89xjdgm</item>
+        <item>https://tinyurl.com/y9wr24fu</item>
+        <item>https://tinyurl.com/ybmj96so</item>
+        <item>https://tinyurl.com/ycg8umyu</item>
+        <item>https://tinyurl.com/y9ef5q5d</item>
+    </string-array>
+
+    <string-array name="male_acc_zero">
+        <item>https://tinyurl.com/ybbkw94w</item>
+        <item>https://tinyurl.com/y8cw3rkh</item>
+        <item>https://tinyurl.com/ycylgarx</item>
+        <item>https://tinyurl.com/yc3aacbt</item>
+        <item>https://tinyurl.com/y8uxxzm9</item>
+        <item>https://tinyurl.com/y7rvghxl</item>
+        <item>https://tinyurl.com/y7a5d6th</item>
+        <item>https://tinyurl.com/y8nrljba</item>
+        <item>https://tinyurl.com/y8slqlmp</item>
+        <item>https://tinyurl.com/y7avycdd</item>
+        <item>https://tinyurl.com/yb7crhnm</item>
+        <item>https://tinyurl.com/y97j8v58</item>
+        <item>https://tinyurl.com/y9khgfjn</item>
+        <item>https://tinyurl.com/y8twoepj</item>
+        <item>https://tinyurl.com/y9y24hg6</item>
+        <item>https://tinyurl.com/y7aww6n9</item>
+        <item>https://tinyurl.com/y85x7qer</item>
+        <item>https://tinyurl.com/y8pvm4ch</item>
+    </string-array>
+
+
+
+    <string-array name="female_top_zero">
+        <item>https://tinyurl.com/ydxvkr3p</item>
+        <item>https://tinyurl.com/y6v2efh2</item>
+        <item>https://tinyurl.com/y8sko35v</item>
+        <item>https://tinyurl.com/ycev2k8x</item>
+        <item>https://tinyurl.com/ydeyb24a</item>
+        <item>https://tinyurl.com/y7rch36f</item>
+        <item>https://tinyurl.com/ychhyevr</item>
+        <item>https://tinyurl.com/ybfw3gax</item>
+        <item>https://tinyurl.com/ycrbaz36</item>
+        <item>https://tinyurl.com/yb5ptg9o</item>
+        <item>https://tinyurl.com/ybe89q9a</item>
+        <item>https://tinyurl.com/yafzaxjf</item>
+        <item>https://tinyurl.com/y9dwufg4</item>
+        <item>https://tinyurl.com/y96cqslh</item>
+        <item>https://tinyurl.com/y9htztgy</item>
+        <item>https://tinyurl.com/ya72cctf</item>
+        <item>https://tinyurl.com/y9m3wxg5</item>
+        <item>https://tinyurl.com/y8oq2als</item>
+    </string-array>
+
+    <string-array name="female_bottom_zero">
+        <item>https://tinyurl.com/y855jmtv</item>
+        <item>https://tinyurl.com/yc8vlm8h</item>
+        <item>https://tinyurl.com/y78wnltv</item>
+        <item>https://tinyurl.com/y75ydhgs</item>
+        <item>https://tinyurl.com/yb5f22xk</item>
+        <item>https://tinyurl.com/y8rr9gyv</item>
+        <item>https://tinyurl.com/y8vz68b5</item>
+        <item>https://tinyurl.com/y89xjdgm</item>
+        <item>https://tinyurl.com/y9wr24fu</item>
+        <item>https://tinyurl.com/y7wboyxc</item>
+        <item>https://tinyurl.com/yagrs75q</item>
+        <item>https://tinyurl.com/yde2s72l</item>
+        <item>https://tinyurl.com/yb5ptg9o</item>
+        <item>https://tinyurl.com/ybe89q9a</item>
+        <item>https://tinyurl.com/yafzaxjf</item>
+        <item>https://tinyurl.com/y7yt6525</item>
+        <item>https://tinyurl.com/y8m8g2eh</item>
+        <item>https://tinyurl.com/ycnc9nbt</item>
+    </string-array>
+
+    <string-array name="female_foot_zero">
+        <item>https://tinyurl.com/ya2uh55z</item>
+        <item>https://tinyurl.com/y7cg3dnd</item>
+        <item>https://tinyurl.com/y8woskzl</item>
+        <item>https://tinyurl.com/y9zl77px</item>
+        <item>https://tinyurl.com/ya3wx3fo</item>
+        <item>https://tinyurl.com/yasbk8xa</item>
+        <item>https://tinyurl.com/y97waakv</item>
+        <item>https://tinyurl.com/yd4wm7ds</item>
+        <item>https://tinyurl.com/yb94wxyu</item>
+        <item>https://tinyurl.com/y9ymhetr</item>
+        <item>https://tinyurl.com/ycyh2eds</item>
+        <item>https://tinyurl.com/y8tetdl5</item>
+        <item>https://tinyurl.com/y7uymnbp</item>
+        <item>https://tinyurl.com/y8mxop8x</item>
+        <item>https://tinyurl.com/y777btrv</item>
+        <item>https://tinyurl.com/ychhyevr</item>
+        <item>https://tinyurl.com/ybfw3gax</item>
+        <item>https://tinyurl.com/ycrbaz36</item>
+    </string-array>
+
+    <string-array name="female_acc_zero">
+        <item>https://tinyurl.com/y7yt6525</item>
+        <item>https://tinyurl.com/y8m8g2eh</item>
+        <item>https://tinyurl.com/ycnc9nbt</item>
+        <item>https://tinyurl.com/y8sjp6yx</item>
+        <item>https://tinyurl.com/yaaphhog</item>
+        <item>https://tinyurl.com/y7optcac</item>
+        <item>https://tinyurl.com/y7aww6n9</item>
+        <item>https://tinyurl.com/y85x7qer</item>
+        <item>https://tinyurl.com/y8pvm4ch</item>
+        <item>https://tinyurl.com/y9khgfjn</item>
+        <item>https://tinyurl.com/y8twoepj</item>
+        <item>https://tinyurl.com/y9y24hg6</item>
+        <item>https://tinyurl.com/y7a6esac</item>
+        <item>https://tinyurl.com/y9qfqxte</item>
+        <item>https://tinyurl.com/ybbslp5z</item>
+        <item>https://tinyurl.com/ybbkw94w</item>
+        <item>https://tinyurl.com/y8cw3rkh</item>
+        <item>https://tinyurl.com/ycylgarx</item>
+    </string-array>
+
 
 
 </resources>

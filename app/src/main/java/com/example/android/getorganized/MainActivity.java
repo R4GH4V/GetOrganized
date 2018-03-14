@@ -16,6 +16,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
 import android.provider.ContactsContract;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText email;
     private static final Integer checked = null;
     private  DatabaseHandler db;
-    private String gender= null;
+    private static String gender= null;
     private Date date;
     public MainActivity() {
     }
@@ -203,13 +204,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         res.updateConfiguration(conf, dm);
     }
 
-    public void setGender(String g)
+    public static void setGender(String g)
     {
-        this.gender=g;
+        gender=g;
     }
-    public String getGender()
+    public static String getGender()
     {
         return gender;
     }
+
+
 }
 
