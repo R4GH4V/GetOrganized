@@ -369,17 +369,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 String dates = cursor.getString(1);
 
                 Date eventdate = convertStringtodate(dates);
+                events event = new events();
+                         event.setId(id);
+                         event.setDate(dates);
+                         result.add(event);
 
-                try {
-                    if (eventdate.after(date) || eventdate.equals(date)) {
-                        events event = new events();
-                        event.setId(id);
-                        event.setDate(dates);
-                        result.add(event);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+             //   try {
+             //       if (eventdate.after(date) || eventdate.equals(date)) {
+             //           events event = new events();
+              //          event.setId(id);
+              //          event.setDate(dates);
+              //          result.add(event);
+             //       }
+             //   } catch (Exception e) {
+             //       e.printStackTrace();
+            //    }
 
             }while (cursor.moveToNext());
         }

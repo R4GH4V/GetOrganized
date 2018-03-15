@@ -43,26 +43,28 @@ import java.util.concurrent.ScheduledExecutorService;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnstart;
-    private RadioButton eng,chi,male,female;
+    private RadioButton eng,chi;
     private EditText email;
-    private static final Integer checked = null;
     private  DatabaseHandler db;
     private static String gender= null;
-    private Date date;
+    public static String lang="en";
     public MainActivity() {
     }
 
         @Override
         protected void onCreate (Bundle savedInstanceState){
+
+        //    setLocale(lang);
             super.onCreate(savedInstanceState);
             db= new DatabaseHandler(MainActivity.this);
             db.userdata();
             boolean check= db.userdata_check();
+
             if (check == true)
             {
                 Intent in = new Intent(MainActivity.this, ClosetActivity.class);
+     //           in.putExtra("lang",lang);
                 startActivity(in);
-                finish();
             }
             setContentView(R.layout.activity_main);
             findviewByid();
@@ -194,21 +196,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.eng:
                 setLocale("en");
+                lang="en";
                 break;
 
             case R.id.chi:
                 setLocale("zh");
+                lang="en";
                 break;
         }
     }
 
     public void setLocale(String lang) {
+
         Locale locale = new Locale(lang);
+
+        Configuration configuration=getBaseContext().getResources().getConfiguration();
+        configuration.locale=locale;
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
         Configuration conf = res.getConfiguration();
         conf.locale = locale;
+        Configuration systemConf= Resources.getSystem().getConfiguration();
+        systemConf.locale=locale;
+        Locale.setDefault(locale);
         res.updateConfiguration(conf, dm);
+
     }
 
     public static void setGender(String g)
