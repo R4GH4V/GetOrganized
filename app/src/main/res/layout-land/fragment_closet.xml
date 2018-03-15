@@ -65,6 +65,7 @@
         android:numColumns="5"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
