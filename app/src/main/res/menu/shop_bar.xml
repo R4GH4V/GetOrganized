@@ -4,8 +4,8 @@
 <item
     android:title="@string/forum"
     android:id="@+id/forum"
-    android:icon="@mipmap/forum"
-    app:showAsAction="always">
+    android:icon="@drawable/ic_forum"
+    app:showAsAction="withText|always">
 </item>
 
 </menu>
