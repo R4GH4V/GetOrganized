@@ -5,6 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true"
+        >
+    </supports-screens>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +20,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+
+
+        <activity android:name=".MainActivity"
+            android:configChanges="locale">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,14 +32,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:configChanges="locale|orientation|layoutDirection"
             android:name=".ClosetActivity"
             android:label="@string/closet"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:configChanges="locale|orientation|layoutDirection"
             android:name=".CalendarActivity"
             android:label="@string/calendar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:configChanges="locale"
             android:name=".ShopActivity"
             android:label="@string/shop"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -36,22 +51,29 @@
             android:label="@string/menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:configChanges="locale"
             android:name=".SubmenuActivity"
             android:parentActivityName=".MenuActivity"
             android:label="Menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ItemActivity" />
-        <activity android:name=".ShopDisplayActivity"/>
+        <activity android:name=".ItemActivity"
+            android:configChanges="locale"/>
+        <activity android:name=".ShopDisplayActivity"
+            android:configChanges="locale"/>
         <activity
+            android:configChanges="locale"
             android:name=".viewdate"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:configChanges="locale"
             android:name=".add_cloth_calendar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:configChanges="locale"
             android:name=".forum"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:configChanges="locale"
             android:name=".post"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

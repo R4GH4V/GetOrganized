@@ -198,4 +198,9 @@
     <string name="email_error">请填写电子邮箱</string>
     <string name="nodata">这天没有添加数据</string>
 
+    <string name="english">English</string>
+    <string name="forum">论坛</string>
+    <string name="post">发布</string>
+    <string name="uploadsucess">成功发布</string>
+    <string name="addimagedailog">您想要为这天添加衣物吗？</string>
 </resources>

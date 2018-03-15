@@ -178,7 +178,7 @@ public class add_cloth_calendar extends AppCompatActivity implements AdapterView
 
                 final AlertDialog.Builder dialogbox = new AlertDialog.Builder(new ContextThemeWrapper(add_cloth_calendar.this,R.style.dailog));
                 dialogbox.setTitle(R.string.add);
-                dialogbox.setMessage(R.string.doyouwanttoaddthisitemforthisdate);
+                dialogbox.setMessage(R.string.addimagedailog);
                 dialogbox.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
