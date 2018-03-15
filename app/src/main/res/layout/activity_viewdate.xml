@@ -10,8 +10,7 @@
     
     <GridView
         android:id="@+id/viewdate_gridview"
-        android:columnWidth="100dp"
-        android:numColumns="auto_fit"
+        android:numColumns="3"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:gravity="center"
@@ -23,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/add_cloth"
-        android:text="Add"/>
+        android:text="Add"
+        style="@style/NiceButton"/>
 
 </LinearLayout>
