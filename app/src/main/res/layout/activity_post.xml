@@ -13,22 +13,22 @@
         android:theme="?attr/actionBarTheme"
         android:backgroundTint="@color/colorPrimary">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:textColor="@color/colorWhite">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/colorWhite">
 
-    </TextView>
+        </TextView>
     </android.support.v7.widget.Toolbar>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
     <LinearLayout
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
@@ -59,13 +59,13 @@
         android:layout_height="wrap_content">
 
         <Spinner
-            android:id="@+id/spinner11"
+            android:id="@+id/spinner111"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
         <Spinner
-            android:id="@+id/spinner22"
+            android:id="@+id/spinner222"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -80,14 +80,14 @@
         android:background="@color/colorPrimaryLightest" />
 
     <GridView
-        android:id="@+id/gridview1"
+        android:id="@+id/gridview11"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:columnWidth="100dp"
         android:horizontalSpacing="5dp"
-        android:numColumns="3"
+        android:numColumns="auto_fit"
         android:verticalSpacing="10dp" />
 
 </LinearLayout>
-
 </LinearLayout>

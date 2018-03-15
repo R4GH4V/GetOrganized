@@ -65,9 +65,6 @@ public class SettingsFragment extends Fragment {
         });
     }
 
-
-
-
     public void setLocale(String lang)
     {
         Locale locale= new Locale(lang);

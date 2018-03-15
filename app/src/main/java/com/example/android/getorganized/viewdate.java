@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -59,7 +60,7 @@ public class viewdate extends AppCompatActivity implements View.OnClickListener{
 
                 AlertDialog.Builder dialogbox= new AlertDialog.Builder(new ContextThemeWrapper(viewdate.this,R.style.dailog));
                 dialogbox.setTitle(R.string.delete);
-                dialogbox.setMessage(R.string.doyouwanttoaddthisitemforthisdate);
+                dialogbox.setMessage(R.string.areyousureyouwanttodeletethisitem);
                 dialogbox.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

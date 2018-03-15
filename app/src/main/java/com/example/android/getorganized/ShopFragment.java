@@ -9,6 +9,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -31,10 +34,28 @@ public class ShopFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActivity().setTitle(R.string.shop);
         setRetainInstance(true);
+        setHasOptionsMenu(true);
         db = new DatabaseHandler(getActivity());
         return inflater.inflate(R.layout.fragment_shop,null);
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.shop_bar,menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id= item.getItemId();
+        //ActionBar Click handling
+        if(id==R.id.forum) {
+            Intent intent =new Intent(getActivity(),forum.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -109,7 +130,5 @@ public class ShopFragment extends Fragment {
                 startActivity( webPageIntent );
             }
         });
-
-
     }
 }

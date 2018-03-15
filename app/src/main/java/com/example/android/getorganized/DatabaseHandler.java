@@ -1,5 +1,6 @@
 package com.example.android.getorganized;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,6 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.design.widget.TabLayout;
 import android.util.Log;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -347,5 +350,68 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         int a= cursor.getCount();
         if(a==1)return true;
         else return false;
+    }
+
+    @SuppressLint("LongLogTag")
+    public List<events> getevents()
+    {
+        SQLiteDatabase db =this.getWritableDatabase();
+        List<events> result = new ArrayList<events>();
+        Date date= new Date();
+        String query= "Select * from "+Table_worn;
+        Cursor cursor=db.rawQuery(query,null);
+
+        int a =cursor.getCount();
+        Log.e("cursor count: ",String.valueOf(a));
+        if(cursor.moveToFirst()) {
+            do {
+                int id = Integer.parseInt(cursor.getString(0));
+                String dates = cursor.getString(1);
+
+                Date eventdate = convertStringtodate(dates);
+
+                try {
+                    if (eventdate.after(date) || eventdate.equals(date)) {
+                        events event = new events();
+                        event.setId(id);
+                        event.setDate(dates);
+                        result.add(event);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }while (cursor.moveToNext());
+        }
+        Log.e("Result size in database: ",String.valueOf(result.size()) );
+        db.close();
+
+        return result;
+    }
+
+    public Date convertStringtodate(String input)
+    {
+        Date date= null;
+        DateFormat dateFormat= DateFormat.getDateInstance(DateFormat.MEDIUM);
+
+        try {
+            date=dateFormat.parse(input);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return date;
+    }
+    public String getuser()
+    {
+        SQLiteDatabase db= this.getWritableDatabase();
+        String query= "select "+Email +" from "+Table_user+";";
+        Cursor cursor= db.rawQuery(query,null);
+        String name = null;
+        if(cursor.moveToFirst())
+        {
+            name=cursor.getString(0);
+        }
+        return name;
     }
 }

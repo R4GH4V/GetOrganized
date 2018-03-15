@@ -1,5 +1,6 @@
 package com.example.android.getorganized;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -23,12 +24,15 @@ public class GridAdapter extends ArrayAdapter {
     private LayoutInflater mInflater;
     private List<Date> monthlyDates;
     private Calendar currentDate;
+    private List<events> allevents;
 
-    public GridAdapter(Context context, List<Date> monthlyDates, Calendar currentDate) {
+    public GridAdapter(Context context, List<Date> monthlyDates, Calendar currentDate,List<events> events) {
         super( context,R.layout.single_cell_layout);
         this.monthlyDates = monthlyDates;
         this.currentDate = currentDate;
+        this.allevents=events;
     }
+    @SuppressLint("ResourceAsColor")
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -42,17 +46,30 @@ public class GridAdapter extends ArrayAdapter {
         int currentMonth = currentDate.get(Calendar.MONTH) + 1;
         int currentYear = currentDate.get(Calendar.YEAR);
         View view = convertView;
-        if(view == null){
+        if (view == null) {
             view = mInflater.inflate(R.layout.single_cell_layout, parent, false);
         }
-        if(displayMonth == currentMonth && displayYear == currentYear){
+        if (displayMonth == currentMonth && displayYear == currentYear) {
             view.setBackgroundColor(Color.parseColor("#cccccc"));
-        }else{
+        } else {
             view.setBackgroundColor(Color.parseColor("#ffffff"));
         }
-        //Add day to calendar
-        TextView cellNumber = (TextView)view.findViewById(R.id.calendar_date_id);
+
+        TextView cellNumber = (TextView) view.findViewById(R.id.calendar_date_id);
         cellNumber.setText(String.valueOf(dayValue));
+
+        TextView event = (TextView) view.findViewById(R.id.event_id);
+        Calendar calendar = Calendar.getInstance();
+        DatabaseHandler db = new DatabaseHandler(getContext());
+        for (int i = 0; i < allevents.size(); i++) {
+            String abc = allevents.get(i).getDate();
+            Date main = db.convertStringtodate(abc);
+            calendar.setTime(main);
+            if (dayValue == calendar.get(Calendar.DAY_OF_MONTH) && displayMonth == calendar.get(Calendar.MONTH) + 1
+                    && displayYear == calendar.get(Calendar.YEAR)) {
+                event.setBackgroundColor(R.color.colorPrimaryDarkest);
+            }
+        }
         return view;
     }
     @Override

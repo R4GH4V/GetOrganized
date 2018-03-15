@@ -56,9 +56,7 @@ public class CalendarFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         getActivity().setTitle(R.string.calendar);
-
         View view = inflater.inflate(R.layout.fragment_calendar,null);
         previousButton = (ImageView)view.findViewById(R.id.previous_month);
         nextButton = (ImageView)view.findViewById(R.id.next_month);
@@ -110,8 +108,14 @@ public class CalendarFragment extends Fragment{
         });
     }
 
+    @SuppressLint("LongLogTag")
     private void setUpCalendarAdapter(){
         List<Date> dayValueInCells = new ArrayList<Date>();
+        List<events> event = new ArrayList<events>();
+        DatabaseHandler db= new DatabaseHandler(getContext());
+        event.addAll(db.getevents());
+
+        Log.e("Size of list in calendar: ",String .valueOf(event.size()));
         Calendar mCal = (Calendar)cal.clone();
         mCal.set(Calendar.DAY_OF_MONTH, 1);
         int firstDayOfTheMonth = mCal.get(Calendar.DAY_OF_WEEK) - 1;
@@ -123,7 +127,7 @@ public class CalendarFragment extends Fragment{
         Log.d(TAG, "Number of date " + dayValueInCells.size());
         String sDate = formatter.format(cal.getTime());
         currentDate.setText(sDate);
-        mAdapter = new GridAdapter(getContext(), dayValueInCells, cal);
+        mAdapter = new GridAdapter(getContext(), dayValueInCells, cal,event);
         calendarGridView.setAdapter(mAdapter);
     }
 

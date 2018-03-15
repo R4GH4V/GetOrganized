@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btnstart;
     private RadioButton eng,chi,male,female;
-    private RadioGroup rgroup;
     private EditText email;
     private static final Integer checked = null;
     private  DatabaseHandler db;
@@ -63,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             {
                 Intent in = new Intent(MainActivity.this, ClosetActivity.class);
                 startActivity(in);
+                finish();
             }
             setContentView(R.layout.activity_main);
             findviewByid();
@@ -131,14 +131,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     });
                 }
             };
-            timer.schedule(doasynctask,0,86400000);
+
+            Date date= new Date();
+            int a= date.getHours();
+            int b= date.getMinutes();
+            int c =date.getHours();
+
+            long delay = (a*3600000)+(b*60000)+(c*1000);
+            delay= 86400000-delay+25200000;
+            timer.schedule(doasynctask,delay,86400000);
         }
 
     private void findviewByid() {
         btnstart = (Button) findViewById(R.id.getStarted);
         eng = (RadioButton) findViewById(R.id.eng);
         chi = (RadioButton) findViewById(R.id.chi);
-        rgroup = (RadioGroup) findViewById(R.id.group);
         email=(EditText)findViewById(R.id.et_email);
     }
 
