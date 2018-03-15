@@ -206,8 +206,7 @@ public class ShopGridViewAdapter extends BaseAdapter {
                     R.raw.sweaterf3
             };
         }
-        else if(gender=="Female" && acc_c==0)
-        {
+        else if(gender=="Female" && acc_c==0) {
             shopImages = new Integer[]{
                     R.raw.jewellery1,
                     R.raw.jewellery2,
@@ -229,7 +228,52 @@ public class ShopGridViewAdapter extends BaseAdapter {
                     R.raw.bags3
             };
         }
-    }
+             else if(gender=="Male" && bottom_c!=0 && top_c!=0 && acc_c!=0 && foot_c!=0) {
+            shopImages = new Integer[]{
+                    R.raw.tshirt1,
+                    R.raw.tshirts2,
+                    R.raw.tshirts3,
+                    R.raw.jeans1,
+                    R.raw.jeans2,
+                    R.raw.jeans3,
+                    R.raw.trousers1,
+                    R.raw.trousers2,
+                    R.raw.trousers3,
+                    R.raw.bags1,
+                    R.raw.bags2,
+                    R.raw.bags3,
+                    R.raw.belt1,
+                    R.raw.belt2,
+                    R.raw.belt3,
+                    R.raw.sandals1,
+                    R.raw.sandals2,
+                    R.raw.sandals3
+            };
+        }
+         else if(gender=="Female" && bottom_c!=0 && top_c!=0 && acc_c!=0 && foot_c!=0) {
+            shopImages = new Integer[]{
+                    R.raw.dress1,
+                    R.raw.dress2,
+                    R.raw.dress3,
+                    R.raw.sweaterf1,
+                    R.raw.sweaterf2,
+                    R.raw.sweaterf3,
+                    R.raw.skirts1,
+                    R.raw.skirts2,
+                    R.raw.skirts3,
+                    R.raw.bags1,
+                    R.raw.bags2,
+                    R.raw.bags3,
+                    R.raw.jewellery1,
+                    R.raw.jewellery2,
+                    R.raw.jewellery3,
+                    R.raw.heels1,
+                    R.raw.heels2,
+                    R.raw.heels3
+            };
+        }
+        }
+
 
     @Override
     public int getCount() {

@@ -81,6 +81,12 @@ public class ShopFragment extends Fragment {
         else if (gender=="Female" && acc_c==0){
             pages = res.getStringArray(R.array.female_acc_zero);
         }
+        else if(gender=="Male" && bottom_c!=0 && top_c!=0 && acc_c!=0 && foot_c!=0){
+            pages = res.getStringArray(R.array.male_non_zero);
+        }
+        else if(gender=="Female" && bottom_c!=0 && top_c!=0 && acc_c!=0 && foot_c!=0) {
+            pages = res.getStringArray(R.array.female_non_zero);
+        }
     }
 
 
