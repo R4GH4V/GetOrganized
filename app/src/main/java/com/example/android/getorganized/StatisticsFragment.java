@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 
 // Menu - Statistics
 
@@ -61,33 +63,41 @@ public class StatisticsFragment extends Fragment {
         Log.d(DEBUG_TAG, "onStart");
 
         item_count = (TextView) getActivity().findViewById(R.id.tv_itemcount);
-        item_count.setText(Integer.toString(db.getCount("All")));
-
         top_count = (TextView) getActivity().findViewById(R.id.tv_topcount);
-        top_count.setText(Integer.toString(db.getCount("Top")));
-
         bottom_count = (TextView) getActivity().findViewById(R.id.tv_bottomcount);
-        bottom_count.setText(Integer.toString(db.getCount("Bottom")));
-
         footwear_count = (TextView) getActivity().findViewById(R.id.tv_footwearcount);
-        footwear_count.setText(Integer.toString(db.getCount("Footwear")));
-
         access_count = (TextView) getActivity().findViewById(R.id.tv_accesscount);
-        access_count.setText(Integer.toString(db.getCount("Accessories")));
-
         item_value = (TextView) getActivity().findViewById(R.id.tv_itemvalue);
-        item_value.setText(Integer.toString(db.getSum("All")));
-
         top_value = (TextView) getActivity().findViewById(R.id.tv_topvalue);
-        top_value.setText(Integer.toString(db.getSum("Top")));
-
         bottom_value = (TextView) getActivity().findViewById(R.id.tv_bottomvalue);
-        bottom_value.setText(Integer.toString(db.getSum("Bottom")));
-
         footwear_value = (TextView) getActivity().findViewById(R.id.tv_footwearvalue);
-        footwear_value.setText(Integer.toString(db.getSum("Footwear")));
-
         access_value = (TextView) getActivity().findViewById(R.id.tv_accessvalue);
-        access_value.setText(Integer.toString(db.getSum("Accessories")));
+
+        Locale current = getResources().getConfiguration().locale;
+        String language = current.getLanguage();
+        if (language.equals("zh")) {
+            item_count.setText(Integer.toString(db.getCount("All")));
+            top_count.setText(Integer.toString(db.getCount("上装")));
+            bottom_count.setText(Integer.toString(db.getCount("下装")));
+            footwear_count.setText(Integer.toString(db.getCount("鞋类")));
+            access_count.setText(Integer.toString(db.getCount("配饰")));
+            item_value.setText(Integer.toString(db.getSum("All")));
+            top_value.setText(Integer.toString(db.getSum("上装")));
+            bottom_value.setText(Integer.toString(db.getSum("下装")));
+            footwear_value.setText(Integer.toString(db.getSum("鞋类")));
+            access_value.setText(Integer.toString(db.getSum("配饰")));
+        }
+        else {
+            item_count.setText(Integer.toString(db.getCount("All")));
+            top_count.setText(Integer.toString(db.getCount("Top")));
+            bottom_count.setText(Integer.toString(db.getCount("Bottom")));
+            footwear_count.setText(Integer.toString(db.getCount("Footwear")));
+            access_count.setText(Integer.toString(db.getCount("Accessories")));
+            item_value.setText(Integer.toString(db.getSum("All")));
+            top_value.setText(Integer.toString(db.getSum("Top")));
+            bottom_value.setText(Integer.toString(db.getSum("Bottom")));
+            footwear_value.setText(Integer.toString(db.getSum("Footwear")));
+            access_value.setText(Integer.toString(db.getSum("Accessories")));
+        }
     }
 }
