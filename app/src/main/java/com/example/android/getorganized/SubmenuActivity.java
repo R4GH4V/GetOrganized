@@ -17,7 +17,7 @@ public class SubmenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(null);
 
 
         Log.d(DEBUG_TAG, "onCreate");

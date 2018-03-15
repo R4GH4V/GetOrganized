@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -42,6 +43,9 @@ public class GridViewAdapter extends ArrayAdapter {
         Item item = data.get(position);
         byte[] b = item.getImage();
         holder.image_view.setImageBitmap(BitmapFactory.decodeByteArray(b, 0, b.length));
+
+        holder.image_view.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
+
         return row;
     }
 

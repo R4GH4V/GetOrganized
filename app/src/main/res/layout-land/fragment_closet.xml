@@ -62,11 +62,13 @@
 
     <GridView
         android:id="@+id/gridview"
-        android:columnWidth="130dp"
-        android:numColumns="auto_fit"
+        android:numColumns="5"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <!--android:columnWidth="130dp"
+        android:numColumns="auto_fit"-->
 </LinearLayout>

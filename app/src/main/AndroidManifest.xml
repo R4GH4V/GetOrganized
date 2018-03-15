@@ -37,7 +37,6 @@
             android:name=".SubmenuActivity"
             android:parentActivityName=".MenuActivity"
             android:label="Menu"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ItemActivity" />
         <activity android:name=".viewdate" />
