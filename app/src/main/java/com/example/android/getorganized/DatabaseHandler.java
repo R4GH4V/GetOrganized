@@ -142,7 +142,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Log.d(DEBUG_TAG, "kind, category: " + kind + category);
 
         String selectQuery;
-        if (kind.equals("All")) { // Select All Query
+        if (kind.equals("All") || kind.equals("全部")) { // Select All Query
             selectQuery = "SELECT  * FROM " + TABLE_ITEMS;
         } else if (category.equals("All")){
             selectQuery = "SELECT  * FROM " + TABLE_ITEMS + " WHERE " + KEY_KIND + " = '" + kind + "'";
