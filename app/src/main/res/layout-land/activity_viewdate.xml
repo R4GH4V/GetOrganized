@@ -10,7 +10,7 @@
 
     <GridView
         android:id="@+id/viewdate_gridview"
-        android:numColumns="5"
+        android:numColumns="4"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:gravity="center"

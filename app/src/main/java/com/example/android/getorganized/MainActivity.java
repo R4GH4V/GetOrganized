@@ -165,32 +165,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
+            String abc= email.getText().toString().trim();
         switch (v.getId()) {
 
             case R.id.getStarted:
 
-                Log.e("Gender",gender);
-                if(email.getText()!=null)
+                if(abc.equals("") || abc.equals(null)) {
+                    Toast.makeText(this, R.string.email_error, Toast.LENGTH_LONG).show();
+                }
+                else if(gender==null|| gender=="")
                 {
-                    if(gender=="Male" || gender=="Female")
-                    {
-                        String mail =email.getText().toString().trim();
-                        db.adduserdata(mail,gender);
-                        Intent in = new Intent(MainActivity.this, ClosetActivity.class);
-                        startActivity(in);
-                    }
-                    else
-                    {
-                        Toast.makeText(this, R.string.gender_error,Toast.LENGTH_LONG).show();
-                        break;
-                    }
+                    Toast.makeText(this, R.string.gender_error,Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    if(email.getText()==null)
-                    {
-                        Toast.makeText(this, R.string.email_error,Toast.LENGTH_LONG).show();
-                    }
+                    String mail =email.getText().toString().trim();
+                    db.adduserdata(mail,gender);
+                    Intent in = new Intent(MainActivity.this, ClosetActivity.class);
+                    startActivity(in);
+                    finish();
                 }
                 break;
 
