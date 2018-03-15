@@ -65,7 +65,7 @@
         android:horizontalSpacing="5dp"
         android:numColumns="3"
         android:verticalSpacing="10dp" />
-    <!--android:columnWidth="100dp"-->
+        <!--android:columnWidth="100dp"-->
 
 
 </LinearLayout>
