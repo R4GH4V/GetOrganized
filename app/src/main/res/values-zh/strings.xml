@@ -68,7 +68,7 @@
     <string name="helpmenu2">2) 设置：修改您的电子邮箱、性别和语言设置。</string>
     <string name="helpmenu3">3) 反馈：告诉我们您对这款应用的评价。再次感谢您下载它！</string>
     <string name="emailhint">这将是您的论坛用户名</string>
-    <string name="doyouwanttoaddthisitemforthisdate">你想要在这天添加衣物吗？</string>
+    <string name="doyouwanttoaddthisitemforthisdate">你想要在论坛发布这件衣物吗？</string>
     <string name="imagealreadyselectedforthisdate">已为这天选择了图片</string>
 
 
