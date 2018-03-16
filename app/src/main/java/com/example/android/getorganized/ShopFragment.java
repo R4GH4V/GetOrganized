@@ -66,14 +66,15 @@ public class ShopFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+    }
+
+    public void setPages(){
         gender =MainActivity.getGender();
         top_c=db.getCount("Top");
         bottom_c=db.getCount("Bottom");
         foot_c=db.getCount("Footwear");
         acc_c=db.getCount("Accessories");
-    }
-
-    public void setPages(){
         Resources res= getResources();
         if(gender==null){
             pages = res.getStringArray(R.array.unisex);
