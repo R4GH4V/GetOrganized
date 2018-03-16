@@ -229,8 +229,6 @@ public class post extends AppCompatActivity implements AdapterView.OnItemSelecte
                             }
                         });
 
-                        Intent intent =new Intent(post.this,forum.class);
-                        startActivity(intent);
                         finish();
                     }
                 });
