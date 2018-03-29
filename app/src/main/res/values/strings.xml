@@ -42,7 +42,7 @@
     <string name="accessories">Accessories</string>
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="edit">Edit</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
@@ -63,6 +63,11 @@
     <string name="helpmenu1">1) Statistics: analyze the closet for you. Get to know the total number and values of your items in each kind and category.</string>
     <string name="helpmenu2">2) Settings: change your email, gender and language.</string>
     <string name="helpmenu3">3) Feedback: give us your feedback about this app. Thanking you for downloading it again!</string>
+    <string name="helpshop1">The Shop fragment will display the items that you require, which you do not already have in your Closet.</string>
+    <string name="helpshop2">Upon clicking an item in the shop fragment, you will be lead to the Amazon Web Page. Also you can sell your old items by clicking the forum icon on top right.</string>
+    <string name="helpcalendar1">Calendar page will show you a calendar where you can choose a date to add your item to remind you what to wear on that date.</string>
+    <string name="helpcalendar2">Dates having a dot will be the ones where items have been stored.</string>
+    <string name="helpcalendar3">A notification will be sent at 7AM every morning to let you know if you have items stored on that date.</string>
 
     <string name="emailhint">This will be your username in the forum</string>
     <string name="savedsuccessfully">Saved successfully</string>
